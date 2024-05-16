@@ -1,0 +1,15 @@
+@mixin count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-16);
+
+  span {
+    font-size: var(--text-size-14);
+    line-height: var(--text-height-121);
+  }
+
+  button {
+    @include btnCount;
+  }
+}

@@ -1,0 +1,25 @@
+// базовые подключения
+// @import "node_modules/bootstrap/scss/bootstrap";
+@import "./vendor";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "text";
+@import "card";
+
+@import "./components/footer";
+@import "./components/main/header";
+@import "./components/main/stock";
+@import "./components/main/restaurants";
+@import "./components/main/sorting";
+@import "./components/main/filter";
+@import "./components/authorization/auth";
+@import "./components/address/address";
+@import "./components/basket/basket";
+@import "./components/success/success";
+@import "./components/account/account";
+@import "./components/order/order";
+@import "./components/stock/stock";
+@import "./components/restaurant/restaurant";
+@import "./components/product/product";

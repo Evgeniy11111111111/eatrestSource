@@ -1,0 +1,62 @@
+.address {
+  &__header {
+    &-content {
+      padding: var(--gap-40) 0 var(--gap-15);
+    }
+  }
+  &__content {
+    padding: var(--gap-15) 0 var(--gap-40);
+  }
+
+  &__block {
+    gap: var(--gap-30);
+  }
+
+  &__search {
+    &-wrap {
+      @include inputSearch;
+    }
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    &:not(:last-child) {
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    &:not(:first-child) {
+      padding-top: 15px;
+    }
+  }
+
+  &__input {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+  }
+
+  &__radio {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 8px);
+    width: 16px;
+    height: 16px;
+    background-color: var(--gray-light);
+    border: 1.6px solid transparent;
+    border-radius: 50%;
+  }
+
+  &__input:checked ~ &__radio {
+    border-color: var(--orange);
+  }
+
+  &__text {
+    color: var(--gray-dark);
+  }
+
+  &__input:checked ~ .address__text {
+    font-weight: 600;
+  }
+}

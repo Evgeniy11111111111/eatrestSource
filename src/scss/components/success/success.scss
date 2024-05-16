@@ -1,0 +1,62 @@
+.success {
+  &__header {
+    &-content {
+      padding: var(--gap-40) 0 var(--gap-15);
+
+    }
+  }
+
+  &__ordered {
+    &-content {
+      padding: var(--gap-15) 0 var(--gap-30);
+      border-bottom: 1px solid var(--gray-border);
+    }
+    &-title {
+      margin-bottom: var(--gap-20);
+    }
+
+    &-slide {
+      @include card(80px);
+
+      &-name {
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Ограничение на количество строк */
+        -webkit-box-orient: vertical;
+        font-size: var(--text-size-12);
+        line-height: var(--text-height-121);
+        font-weight: var(--text-regular);
+      }
+    }
+  }
+
+  &__grade {
+    &-content {
+      padding-top: var(--gap-30);
+    }
+
+    &-title {
+      margin-bottom: var(--gap-20);
+    }
+
+    &-stars {
+      gap: var(--gap-20);
+      margin-bottom: var(--gap-20);
+    }
+
+    &-star {
+      svg path {
+        transition: fill .3s ease-in-out;
+      }
+    }
+
+    &-star.active {
+      svg path {
+        fill: var(--orange);
+      }
+    }
+
+    &-comment {
+      @include input(10px);
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.restaurants {
+  &__content {
+    padding: var(--gap-20) 0 var(--gap-40);
+    gap: var(--gap-30);
+  }
+
+  &__title {
+    &-second {
+      margin-bottom: var(--gap-10);
+    }
+  }
+
+  &__settings {
+    gap: var(--gap-10);
+  }
+
+  &__filter {
+    @include btnSettings;
+  }
+
+  &__sort {
+    @include btnSettings;
+  }
+
+  &__filters {
+    padding: var(--gap-10) 0;
+
+    &-list {
+      overflow-x: auto;
+      gap: var(--gap-10);
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background: transparent; /* Сделать скроллбар прозрачным */
+      }
+    }
+    &-btn {
+      @include btnFilter;
+      border-radius: 5px;
+    }
+    &-btn.active {
+      color: var(--white);
+      background-color: var(--orange);
+    }
+  }
+
+  &__list {
+    gap: var(--gap-30);
+  }
+
+  &__card {
+    @include cardIsWide;
+
+    &-info {
+      &-top {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--gap-20);
+      }
+      &-rate {
+        display: flex;
+        &-svg {
+          margin-right: var(--gap-10);
+        }
+        &-num {
+          margin-top: 1px;
+        }
+      }
+      &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-kitchen {
+        max-width: 205px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+@include('partials/head.html')
+
+<body id="basket">
+<div class="site-container">
+  <header class="address-header">
+    @include('partials/basket/header.html')
+  </header>
+  <main class="main">
+    @include('partials/basket/basket.html')
+  </main>
+  <div class="modal fade js-modal-delete">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content basket__modal">
+        <div class="modal-body p-0 d-flex align-items-center">
+          <button class="btn-reset basket__modal-btn basket__modal-cancel">
+            Отменить
+          </button>
+          <button class="btn-reset basket__modal-btn basket__modal-clear">
+            Очистить
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    @include('partials/footer.html')
+  </footer>
+</div>
+</body>
+<script>
+</script>
+</html>

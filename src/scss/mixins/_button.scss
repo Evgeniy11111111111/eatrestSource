@@ -1,0 +1,78 @@
+@mixin btnSettings {
+  display: flex;
+  align-items: center;
+  &-svg {
+    margin-right: var(--gap-10);
+  }
+}
+
+@mixin btnFilter {
+  border-radius: var(--radius-10);
+  background-color: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gap-10);
+  font-size: var(--text-size-14);
+  line-height: var(--text-height-121);
+  color: var(--black);
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+@mixin btnChevronRight {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-light);
+  transition: background-color .3s ease-in-out;
+
+  svg path {
+    transition: stroke .3s ease-in-out;
+  }
+
+  &:hover {
+    background-color: var(--orange);
+
+    svg path {
+      stroke: var(--white);
+    }
+  }
+
+}
+
+@mixin backBtn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+@mixin btnMain($color, $textColor, $textWeight) {
+  width: 100%;
+  min-height: 40px;
+  border-radius: var(--radius-10);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color;
+  color: $textColor;
+  font-size: var(--text-size-16);
+  line-height: var(--text-height-121);
+  font-weight: $textWeight;
+}
+
+@mixin btnCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-5);
+  background-color: var(--gray-light);
+}

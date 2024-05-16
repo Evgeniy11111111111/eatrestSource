@@ -1,0 +1,29 @@
+.authorization {
+  &__content {
+    padding: 40px 0;
+  }
+  &__title {
+    margin-bottom: var(--gap-40);
+  }
+
+  &__block {
+    gap: var(--gap-30);
+  }
+
+  &__item {
+    gap: var(--gap-20);
+    &-block {
+      gap: var(--gap-20);
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    @include btnChevronRight;
+  }
+
+  &__input {
+    @include input(10px);
+    text-align: center;
+  }
+}

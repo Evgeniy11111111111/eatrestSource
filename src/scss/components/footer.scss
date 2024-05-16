@@ -1,0 +1,18 @@
+.footer {
+  box-shadow: 0px 5px 15px 0px #00000026;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+  z-index: 2;
+
+  &__nav {
+    padding: 15px 0;
+  }
+
+  &__link {
+    width: 30px;
+    height: 30px;
+  }
+}

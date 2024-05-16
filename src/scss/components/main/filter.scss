@@ -1,0 +1,56 @@
+.filter {
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  border-top-left-radius: var(--radius-20);
+  border-top-right-radius: var(--radius-20);
+  background-color: var(--white);
+  box-shadow: 0px -4px 10px 1px #00000026;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100vh);
+  transition: transform .3s ease-in-out, visibility .3s ease-in-out, opacity .3s ease-in-out;
+
+  &__touch {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &-strip {
+      width: 100px;
+      height: 5px;
+      background-color: var(--gray-light);
+    }
+
+  }
+
+  &__content {
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+  }
+
+  &__box {
+    gap: 10px;
+  }
+
+  &__btn {
+    @include btnFilter;
+  }
+
+  .active {
+    background-color: var(--orange);
+    color: var(--white);
+  }
+}
+
+.filter.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

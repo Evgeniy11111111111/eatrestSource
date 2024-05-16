@@ -1,0 +1,364 @@
+@mixin card($width) {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: $width;
+  div:first-child {
+    position: relative;
+    width: 100%;
+    background-color: var(--gray-light);
+    border-radius: var(--radius-10);
+    margin-bottom: var(--gap-10);
+    &:before {
+      padding-top: 100%;
+      width: 100%;
+      content: "";
+      display: block;
+
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: var(--radius-10);
+    }
+  }
+}
+
+@mixin cardIsWide {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  &-img {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background-color: var(--gray-light);
+    border-radius: var(--radius-10);
+    margin-bottom: var(--gap-10);
+
+    img {
+      border-radius: var(--radius-10);
+    }
+  }
+
+  &-sale {
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ffffff28;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-like {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ffffff28;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-10);
+  }
+}
+
+@mixin cardSelected {
+  display: flex;
+  gap: var(--gap-25);
+  &-img {
+    width: 70px;
+    height: 70px;
+    background-color: var(--gray-light);
+    border-radius: var(--radius-10);
+    flex-shrink: 0;
+  }
+
+  &-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    &-mid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--gap-10);
+    }
+
+    &-bottom {
+      display: flex;
+    }
+  }
+
+  &-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: var(--text-size-14);
+    line-height: var(--text-height-121);
+    font-weight: var(--text-medium);
+  }
+
+  &-weight {
+    font-size: var(--text-size-12);
+    line-height: var(--text-height-121);
+  }
+
+  &-counter {
+    @include count;
+  }
+  &-count {
+    padding-right: 11px;
+    margin-right: 10px;
+    font-size: var(--text-size-12);
+    line-height: var(--text-height-121);
+    position: relative;
+    &:before {
+      content: "|";
+      position: absolute;
+      right: 0;
+      display: block;
+      font-size: 10px;
+      line-height: var(--text-height-121);
+      font-weight: var(--text-semibold);
+    }
+  }
+
+  &-price {
+    font-size: var(--text-size-12);
+    line-height: var(--text-height-121);
+    font-weight: var(--text-medium);
+  }
+}
+
+@mixin cardProductTop {
+  //background-color: var(--gray-light);
+  border-radius: var(--radius-10);
+  margin-bottom: var(--gap-15);
+  position: relative;
+}
+
+@mixin cardProductStock {
+  border-radius: var(--radius-10);
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-color: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px 20px;
+  color: var(--gray-dark);
+  font-size: var(--text-size-12);
+  line-height: var(--text-height-121);
+}
+
+@mixin cardProductImg {
+  position: relative;
+  width: 100%;
+  background-color: var(--gray-light);
+  border-radius: var(--radius-10);
+  z-index: 1;
+
+  &:before {
+    padding-top: 100%;
+    width: 100%;
+    content: "";
+    display: block;
+
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius-10);
+  }
+}
+@mixin cardProductImgDark {
+  @include cardProductImg;
+  background-color: var(--gray-border);
+  margin-top: 25px;
+}
+
+@mixin cardProductBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin cardProductBottomBottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-15);
+  justify-content: space-between;
+}
+
+@mixin cardProductName {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: var(--text-size-14);
+  line-height: var(--text-height-121);
+  font-weight: var(--text-medium);
+  margin-bottom: var(--gap-10);
+}
+
+@mixin cardProductInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin cardProductWeight {
+  font-size: var(--text-size-14);
+  line-height: var(--text-height-121);
+}
+
+@mixin cardProductPrice {
+  font-size: var(--text-size-14);
+  line-height: var(--text-height-121);
+  font-weight: var(--text-medium);
+}
+
+@mixin cardProductBtns {
+  width: 100%;
+  position: relative;
+}
+
+@mixin cardProductAdd {
+  width: 100%;
+  border-radius: var(--radius-5);
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: var(--text-size-14);
+  line-height: var(--text-height-121);
+  font-weight: var(--text-medium);
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+}
+
+@mixin cardProductAddNotActive {
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(.7);
+}
+
+@mixin cardProductCounter {
+  @include count;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(.7);
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+
+  button {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@mixin cardProductCounterActive {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+@mixin cardProductGeneral($width) {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-width: $width;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@mixin cardProduct($width) {
+  @include cardProductGeneral($width);
+  &-top {
+    @include cardProductTop;
+  }
+
+  &-img {
+    @include cardProductImg;
+  }
+
+  &-bottom {
+    @include cardProductBottom;
+
+    &-bottom {
+      @include cardProductBottomBottom
+    }
+  }
+
+  &-name {
+    @include cardProductName;
+  }
+
+  &-info {
+    @include cardProductInfo
+  }
+
+  &-weight {
+    @include cardProductWeight;
+  }
+
+  &-price {
+    @include cardProductPrice;
+  }
+
+  &-btns {
+    @include cardProductBtns;
+  }
+
+  &-add {
+    @include cardProductAdd;
+  }
+
+  &-add.not-active {
+    @include cardProductAddNotActive;
+  }
+
+  &-counter {
+    @include cardProductCounter
+  }
+
+  &-counter.active {
+    @include cardProductCounterActive;
+  }
+}

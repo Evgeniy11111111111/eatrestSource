@@ -1,0 +1,164 @@
+<section class="restaurants">
+  <div class="container-fluid custom-container">
+    <div class="restaurants__content d-flex flex-column">
+      <h2 class="restaurants__title text-16-bold">
+        <span class="text-orange">Все</span> рестораны
+      </h2>
+      <div class="restaurants__settings d-flex align-items-center justify-content-between">
+        <button class="restaurants__filter btn-reset">
+          <span class="restaurants__filter-svg">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 4.20001H17" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M1 13.8H17" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="6.79998" cy="4.2" r="3.2" fill="white" stroke="#333333" stroke-width="1.5"/>
+              <circle cx="11.2" cy="13.8" r="3.2" fill="white" stroke="#333333" stroke-width="1.5"/>
+            </svg>
+          </span>
+          <span class="restaurants__filter-text text-14-medium">
+            Отфильтровать
+          </span>
+        </button>
+        <button class="restaurants__sort btn-reset">
+          <span class="restaurants__filter-svg">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.2 17L4.2 1M4.2 1L1 4.2M4.2 1L7.4 4.2" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.8 17V1M13.8 17L10.6 13.8M13.8 17L17 13.8" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="restaurants__filter-text text-14-medium">
+            Отсортировать
+          </span>
+        </button>
+      </div>
+      <div class="restaurants__filters">
+        <h3 class="restaurants__title-second text-1">Блюда и кухни</h3>
+        <div class="restaurants__filters-list d-flex">
+          <button class="restaurants__filters-btn active btn-reset">Кухня</button>
+          <button class="restaurants__filters-btn btn-reset">Блюдооо</button>
+          <button class="restaurants__filters-btn btn-reset">Кухня</button>
+          <button class="restaurants__filters-btn btn-reset">Блюдооо</button>
+          <button class="restaurants__filters-btn btn-reset">Кухня</button>
+          <button class="restaurants__filters-btn btn-reset">Блюдооо</button>
+        </div>
+      </div>
+      <div class="restaurants__list d-flex flex-column">
+        <a class="restaurants__card">
+          <div class="restaurants__card-img">
+            <div class="restaurants__card-sale">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 15L15 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="3" cy="4" r="2.25" stroke="white" stroke-width="1.5"/>
+                <circle cx="13" cy="12" r="2.25" stroke="white" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="restaurants__card-like">
+              <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.49355 8.82282L8.01761 13.7654C8.40494 14.112 8.99318 14.104 9.37103 13.7472L14.5796 8.82801C15.4862 7.97174 16 6.77976 16 5.53269V4.8333C16 2.71622 14.2838 1 12.1667 1C11.0022 1 9.90085 1.52934 9.1734 2.43866L8.88931 2.79377C8.79364 2.91335 8.61176 2.91335 8.5161 2.79377L8.31421 2.54142C7.5348 1.56715 6.35478 1 5.1071 1C2.83881 1 1 2.83882 1 5.10711V5.48237C1 6.75762 1.54318 7.97249 2.49355 8.82282Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <img src="./img/img.png">
+          </div>
+          <div class="restaurants__card-info">
+            <div class="restaurants__card-info-top">
+              <h3 class="restaurants__card-info-title text-14-medium">
+                Длинное название ресторана
+              </h3>
+              <div class="restaurants__card-info-rate">
+                <div class="restaurants__card-info-rate-svg">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12V6.80554" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M5 12V1" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M9 12V4.36108" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M13 12V9.25" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="restaurants__card-info-rate-num text-gray-dark text-14">0,0</div>
+              </div>
+            </div>
+            <div class="restaurants__card-info-bottom">
+              <p class="restaurants__card-info-kitchen text-12 text-gray-dark">Вид кухни, категория блюд 1, категория блюд 2</p>
+              <span class="restaurants__card-info-time text-12 text-gray-dark">00 минут</span>
+            </div>
+          </div>
+        </a>
+        <a class="restaurants__card">
+          <div class="restaurants__card-img">
+            <div class="restaurants__card-sale">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 15L15 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="3" cy="4" r="2.25" stroke="white" stroke-width="1.5"/>
+                <circle cx="13" cy="12" r="2.25" stroke="white" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="restaurants__card-like">
+              <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.49355 8.82282L8.01761 13.7654C8.40494 14.112 8.99318 14.104 9.37103 13.7472L14.5796 8.82801C15.4862 7.97174 16 6.77976 16 5.53269V4.8333C16 2.71622 14.2838 1 12.1667 1C11.0022 1 9.90085 1.52934 9.1734 2.43866L8.88931 2.79377C8.79364 2.91335 8.61176 2.91335 8.5161 2.79377L8.31421 2.54142C7.5348 1.56715 6.35478 1 5.1071 1C2.83881 1 1 2.83882 1 5.10711V5.48237C1 6.75762 1.54318 7.97249 2.49355 8.82282Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="restaurants__card-info">
+            <div class="restaurants__card-info-top">
+              <h3 class="restaurants__card-info-title text-14-medium">
+                Длинное название ресторана
+              </h3>
+              <div class="restaurants__card-info-rate">
+                <div class="restaurants__card-info-rate-svg">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12V6.80554" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M5 12V1" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M9 12V4.36108" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M13 12V9.25" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="restaurants__card-info-rate-num text-gray-dark text-14">0,0</div>
+              </div>
+            </div>
+            <div class="restaurants__card-info-bottom">
+              <p class="restaurants__card-info-kitchen text-12 text-gray-dark">Вид кухни, категория блюд 1, категория блюд 2</p>
+              <span class="restaurants__card-info-time text-12 text-gray-dark">00 минут</span>
+            </div>
+          </div>
+        </a>
+        <a class="restaurants__card">
+          <div class="restaurants__card-img">
+            <div class="restaurants__card-sale">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 15L15 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="3" cy="4" r="2.25" stroke="white" stroke-width="1.5"/>
+                <circle cx="13" cy="12" r="2.25" stroke="white" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="restaurants__card-like">
+              <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.49355 8.82282L8.01761 13.7654C8.40494 14.112 8.99318 14.104 9.37103 13.7472L14.5796 8.82801C15.4862 7.97174 16 6.77976 16 5.53269V4.8333C16 2.71622 14.2838 1 12.1667 1C11.0022 1 9.90085 1.52934 9.1734 2.43866L8.88931 2.79377C8.79364 2.91335 8.61176 2.91335 8.5161 2.79377L8.31421 2.54142C7.5348 1.56715 6.35478 1 5.1071 1C2.83881 1 1 2.83882 1 5.10711V5.48237C1 6.75762 1.54318 7.97249 2.49355 8.82282Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <img src="./img/img.png">
+          </div>
+          <div class="restaurants__card-info">
+            <div class="restaurants__card-info-top">
+              <h3 class="restaurants__card-info-title text-14-medium">
+                Длинное название ресторана
+              </h3>
+              <div class="restaurants__card-info-rate">
+                <div class="restaurants__card-info-rate-svg">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12V6.80554" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M5 12V1" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M9 12V4.36108" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M13 12V9.25" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="restaurants__card-info-rate-num text-gray-dark text-14">0,0</div>
+              </div>
+            </div>
+            <div class="restaurants__card-info-bottom">
+              <p class="restaurants__card-info-kitchen text-12 text-gray-dark">Вид кухни, категория блюд 1, категория блюд 2</p>
+              <span class="restaurants__card-info-time text-12 text-gray-dark">00 минут</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

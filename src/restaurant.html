@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+@include('partials/head.html')
+
+<body id="restaurant">
+<div class="site-container">
+  <header class="restaurant__header">
+    <div class="custom-container container-fluid">
+      <div class="restaurant__header-content">
+        <ul class="restaurant__header-list d-flex align-items-center justify-content-end list-reset">
+          <li class="restaurant__header-item">
+            <a class="restaurant__header-link">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.81603 0.17606C7.16067 0.405825 7.2538 0.871477 7.02404 1.21612L5.87917 2.93343H10.1208L8.97596 1.21612C8.7462 0.871477 8.83933 0.405825 9.18398 0.17606C9.52862 -0.0537041 9.99427 0.0394264 10.224 0.384073L11.9236 2.93343H14C15.1046 2.93343 16 3.82886 16 4.93343V6.26676C16 7.2591 15.2773 8.08264 14.3295 8.23975L14.2758 8.53509L13.3584 13.5806L11.8826 13.3123L12.5273 9.76677L12.8 8.26677H11.2754H4.72459H3.2L3.47273 9.76677L4.11737 13.3123C4.20383 13.7878 4.61796 14.1334 5.10124 14.1334H10.8988C11.382 14.1334 11.7962 13.7878 11.8826 13.3123L13.3584 13.5806C13.1423 14.7694 12.107 15.6334 10.8988 15.6334H5.10124C3.89303 15.6334 2.8577 14.7694 2.64157 13.5806L1.7242 8.53509L1.6705 8.23975C0.722708 8.08264 0 7.2591 0 6.26676V4.93343C0 3.82886 0.895431 2.93343 2 2.93343H4.07639L5.77596 0.384073C6.00573 0.0394264 6.47138 -0.0537041 6.81603 0.17606ZM2 4.43343H14C14.2761 4.43343 14.5 4.65729 14.5 4.93343V6.26676C14.5 6.54291 14.2761 6.76676 14 6.76676H2C1.72386 6.76676 1.5 6.54291 1.5 6.26676V4.93343C1.5 4.65729 1.72386 4.43343 2 4.43343ZM6.4 9.6501C6.81421 9.6501 7.15 9.98588 7.15 10.4001V12.0001C7.15 12.4143 6.81421 12.7501 6.4 12.7501C5.98579 12.7501 5.65 12.4143 5.65 12.0001V10.4001C5.65 9.98588 5.98579 9.6501 6.4 9.6501ZM10.35 10.4001C10.35 9.98588 10.0142 9.6501 9.6 9.6501C9.18579 9.6501 8.85 9.98588 8.85 10.4001V12.0001C8.85 12.4143 9.18579 12.7501 9.6 12.7501C10.0142 12.7501 10.35 12.4143 10.35 12.0001V10.4001Z" fill="#FF6B00"/>
+              </svg>
+            </a>
+          </li>
+          <li class="restaurant__header-item">
+            <a class="restaurant__header-link">
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.67458 9.77104L8.95128 15.387C9.3386 15.7336 9.92684 15.7257 10.3047 15.3688L16.2256 9.77686C17.2421 8.8168 17.8182 7.48033 17.8182 6.0821V5.29794C17.8182 2.92425 15.8939 1 13.5202 1C12.2146 1 10.9797 1.5935 10.1641 2.61304L9.84559 3.01119C9.73833 3.14527 9.5344 3.14527 9.42714 3.01119L9.20079 2.72825C8.3269 1.63589 7.00384 1 5.60494 1C3.0617 1 1 3.0617 1 5.60494V6.02569C1 7.45551 1.60902 8.81764 2.67458 9.77104Z" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </li>
+          <li class="restaurant__header-item">
+            <a class="restaurant__header-link">
+              <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.31812 11.5L7.31812 1M7.31812 1L3.81812 5M7.31812 1L10.8181 5M0.818115 9L0.818115 15H13.8181V9" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <h1 class="restaurant__header-title text-h2">
+          Длинное название ресторана
+        </h1>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    @include('partials/restaurant/top.html')
+    @include('partials/restaurant/settings.html')
+    @include('partials/restaurant/stock.html')
+    @include('partials/restaurant/offers.html')
+    @include('partials/restaurant/menu.html')
+    @include('partials/main/sorting.html')
+    @include('partials/main/filter.html')
+  </main>
+  <footer class="footer">
+    @include('partials/footer.html')
+  </footer>
+</div>
+</body>
+<script>
+</script>
+</html>
