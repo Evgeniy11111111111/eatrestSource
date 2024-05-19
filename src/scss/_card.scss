@@ -54,9 +54,7 @@
   }
 
   &-add {
-    color: var(--gray-dark);
     font-size: var(--text-size-12);
-    background-color: var(--gray-light);
   }
 
   &-counter {
@@ -77,8 +75,65 @@
     @include cardProductImgDark;
   }
   &-add {
-    color: var(--gray-dark);
     font-size: var(--text-size-12);
-    background-color: var(--gray-light);
+  }
+}
+
+.card-restaurant {
+  @include card(80px);
+
+  &-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Ограничение на количество строк */
+    -webkit-box-orient: vertical;
+    font-size: var(--text-size-12);
+    line-height: var(--text-height-121);
+    font-weight: var(--text-regular);
+  }
+
+  &-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-size-12);
+    line-height: var(--text-height-121);
+    font-weight: var(--text-regular);
+    color: var(--white);
+    background-color: #4F4F4FB2;
+    border-radius: var(--radius-10);
+  }
+}
+
+.card-restaurant-big {
+  @include card(120px);
+  &-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Ограничение на количество строк */
+    -webkit-box-orient: vertical;
+    font-size: var(--text-size-14);
+    line-height: var(--text-height-121);
+    font-weight: var(--text-regular);
+  }
+
+  &-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-size-14);
+    line-height: var(--text-height-121);
+    font-weight: var(--text-regular);
+    color: var(--white);
+    background-color: #4F4F4FB2;
+    border-radius: var(--radius-10);
   }
 }

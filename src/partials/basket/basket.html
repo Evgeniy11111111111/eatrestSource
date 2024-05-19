@@ -103,7 +103,7 @@
         <h2 class="basket__title text-16-bold text-orange">
           Рекомендуем добавить к заказу
         </h2>
-        <div class="basket__swiper swiper">
+        <div class="basket__swiper js-swiper-init swiper">
           <div class="basket__wrapper swiper-wrapper">
             <div class="basket__slide swiper-slide">
               <div class="basket__slide-img">
@@ -245,20 +245,42 @@
           Подтвердить заказ по телефону?
         </h2>
         <div class="basket__confirm-list d-flex flex-column">
-          <label class="basket__label">
-            <input type="radio" name="confirm" class="basket__input">
-            <span class="basket__radio"></span>
-            <span class="basket__text text-16">
-                  Да, пусть мне перезвонят из ресторана
-                </span>
-          </label>
-          <label class="basket__label">
-            <input type="radio" name="confirm" class="basket__input">
-            <span class="basket__radio"></span>
-            <span class="basket__text text-16">
+          <div class="basket__confirm-item">
+            <label class="basket__label">
+              <input type="radio" name="confirm" class="basket__input">
+              <span class="basket__radio"></span>
+              <span class="basket__text text-16">
+              Да, пусть мне перезвонят из ресторана
+            </span>
+            </label>
+            <div class="basket__confirm-phone-wrap">
+              <div class="basket__confirm-phone d-flex">
+                <span class="basket__confirm-phone-num text-14">+7 (000) 000-00-00</span>
+                <span class="basket__confirm-phone-svg">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1111 6.94444L13.4444 4.61111L10.3333 1.5L8 3.83333M11.1111 6.94444L5.66667 12.3889H2.55556V9.27778L8 3.83333M11.1111 6.94444L8 3.83333M1 15.5H15" stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+              </div>
+              <div class="basket__confirm-modal">
+                <input type="tel" placeholder="Введите ваш телефон" class="basket__confirm-modal-input">
+                <button class="btn-reset basket__confirm-modal-btn">
+                  <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L8 8L1 15" stroke="#F7F7F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="basket__confirm-item ">
+            <label class="basket__label">
+              <input type="radio" name="confirm" class="basket__input">
+              <span class="basket__radio"></span>
+              <span class="basket__text text-16">
                   Нет, не нужно
                 </span>
-          </label>
+            </label>
+          </div>
         </div>
       </div>
     </div>

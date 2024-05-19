@@ -51,6 +51,48 @@
       }
     }
 
+    &-btns {
+      position: relative;
+      width: 100%;
+      margin-top: var(--gap-10);
+    }
+
+    &-add {
+      opacity: 1;
+      visibility: visible;
+      transform: scaleY(1);
+      transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+    }
+
+    &-add.not-active {
+      opacity: 0;
+      visibility: hidden;
+      transform: scaleY(.7);
+    }
+
+    &-counter {
+      @include count;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transform: scaleY(.7);
+      transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+
+      button {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &-counter.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scaleY(1);
+    }
+
     &-value {
       padding-bottom: var(--gap-30);
       border-bottom: 1px solid var(--gray-border);

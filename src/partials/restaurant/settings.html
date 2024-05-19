@@ -1,20 +1,70 @@
 <section class="restaurant__settings">
   <div class="custom-container container-fluid">
     <div class="restaurant__settings-content d-flex flex-column">
-      <div class="restaurant__settings-search">
-        <div class="restaurant__settings-search-svg">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.3276 12.3276L17 17" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/>
-            <circle cx="7.60777" cy="7.60777" r="6.60777" fill="#F2F2F2" stroke="#FF6B00" stroke-width="1.5"/>
-          </svg>
+      <div class="search-input-block">
+        <form class="search-input-wrap">
+          <input type="text" placeholder="Найти что-то вкусное" class="search-input">
+          <div class="header__search">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.3276 12.3276L17 17" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="7.60777" cy="7.60777" r="6.60777" fill="#F2F2F2" stroke="#FF6B00" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <button type="button" disabled class="search-input-clear btn-reset">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L13 13" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M13 1L1 13" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </form>
+        <div class="search-input-list d-flex flex-column">
+          <div class="search-input-item">
+            <div class="search-input-item-img"></div>
+            <div class="search-input-item-info">
+              <h3 class="search-input-item-title">
+                Супер-пупер длинное название блюда
+              </h3>
+              <div class="search-input-item-info-mid">
+                <span class="search-input-item-weight">000 г</span>
+              </div>
+              <div class="search-input-item-info-bottom">
+                <span class="search-input-item-count">1 шт.</span>
+                <span class="search-input-item-price">0000 ₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="search-input-item">
+            <div class="search-input-item-img"></div>
+            <div class="search-input-item-info">
+              <h3 class="search-input-item-title">
+                Супер-пупер длинное название блюда
+              </h3>
+              <div class="search-input-item-info-mid">
+                <span class="search-input-item-weight">000 г</span>
+              </div>
+              <div class="search-input-item-info-bottom">
+                <span class="search-input-item-count">1 шт.</span>
+                <span class="search-input-item-price">0000 ₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="search-input-item">
+            <div class="search-input-item-img"></div>
+            <div class="search-input-item-info">
+              <h3 class="search-input-item-title">
+                Супер-пупер длинное название блюда
+              </h3>
+              <div class="search-input-item-info-mid">
+                <span class="search-input-item-weight">000 г</span>
+              </div>
+              <div class="search-input-item-info-bottom">
+                <span class="search-input-item-count">1 шт.</span>
+                <span class="search-input-item-price">0000 ₽</span>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <input placeholder="Введите новый адрес" class="restaurant__settings-search-input">
-        <button disabled class="restaurant__settings-search-btn btn-reset">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L13 13" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M13 1L1 13" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </button>
       </div>
       <div class="restaurant__settings-btns d-flex align-items-center justify-content-between flex-wrap">
         <button class="restaurant__settings-filter btn-reset">

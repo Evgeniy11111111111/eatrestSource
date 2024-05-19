@@ -13,28 +13,4 @@
   &__box {
     gap: var(--gap-30);
   }
-
-  &__slide {
-    @include card(80px);
-    &-big {
-      @include card(120px);
-    }
-    &-name {
-      display: -webkit-box;
-      -webkit-line-clamp: 2; /* Ограничение на количество строк */
-      -webkit-box-orient: vertical;
-      font-size: var(--text-size-12);
-      line-height: var(--text-height-121);
-      font-weight: var(--text-regular);
-
-      &-big {
-        display: -webkit-box;
-        -webkit-line-clamp: 2; /* Ограничение на количество строк */
-        -webkit-box-orient: vertical;
-        font-size: var(--text-size-14);
-        line-height: var(--text-height-121);
-        font-weight: var(--text-medium);
-      }
-    }
-  }
 }

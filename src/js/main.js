@@ -1,23 +1,34 @@
 if (document.getElementById("index")) {
-  const sliderOne = initSwiper(".main-stock__swiper-1")
-  const sliderTwo = initSwiper(".main-stock__swiper-2")
-  const sliderThree = initSwiper(".main-stock__swiper-3")
-  const sliderFour = initSwiper(".main-stock__swiper-4")
-  const sliderFive = initSwiper(".main-stock__swiper-5")
+  initArraySwiper();
 
   const btnSort = document.querySelector(".restaurants__sort");
   const sortModal = document.querySelector(".sorting");
+  const scrollSort = document.querySelector(".sorting__box")
   const btnFilter = document.querySelector(".restaurants__filter");
   const filterModal = document.querySelector(".filter");
-  btnSort.addEventListener('click', () => {
+  const scrollFilter = document.querySelector(".filter__box");
+  btnSort.addEventListener('click', (e) => {
+    e.stopPropagation()
     openModal(sortModal)
+    scrollSort.scrollTo(0, 0)
+    document.body.classList.add('lock')
+    if (filterModal.classList.contains("active")) {
+      filterModal.classList.remove("active")
+    }
   })
-  btnFilter.addEventListener('click', () => {
+  btnFilter.addEventListener('click', (e) => {
+    e.stopPropagation()
     openModal(filterModal)
+    scrollFilter.scrollTo(0, 0)
+    document.body.classList.add('lock')
+    if (sortModal.classList.contains("active")) {
+      sortModal.classList.remove("active")
+    }
   })
 
-  setupModalEvents(sortModal)
-  setupModalEvents(filterModal)
+  setupModalEvents(sortModal, scrollSort)
+  setupModalEvents(filterModal, scrollFilter)
+  console.log(scrollSort)
 
   const filterBtn = document.querySelectorAll('.filter__btn');
 
@@ -37,17 +48,45 @@ if (document.getElementById("index")) {
     })
   })
 
-  const inputSearch = document.querySelector('.header__input');
-  const btnClearSearch = document.querySelector('.header__search-clear')
-  inputSearch.addEventListener('input', () => {showClear(inputSearch, btnClearSearch)})
+  const inputSearch = document.querySelector('.search-input');
+  const btnClearSearch = document.querySelector('.search-input-clear')
+  const inputSearchList = document.querySelector('.search-input-list')
+  inputSearch.addEventListener('input', () => {
+    showClear(inputSearch, btnClearSearch)
+    if (inputSearch.value.length > 1) {
+      inputSearchList.classList.add("active");
+    } else {
+      inputSearchList.classList.remove("active");
+    }
+  })
   btnClearSearch.addEventListener("click", () => {
     clearInput(inputSearch)
     showClear(inputSearch, btnClearSearch)
+
+    if (inputSearch.value.length > 1) {
+      inputSearchList.classList.add("active");
+    } else {
+      inputSearchList.classList.remove("active");
+    }
   })
 
-  const addressBtn = document.querySelector('.header__address-btn')
-  const addBtn = document.querySelector('.header__address-add')
-  const addressSearch = document.querySelector('.header__address-search')
+
+
+  const addressBtn = document.querySelector('.address-block-btn')
+  const addBtn = document.querySelector('.address-block-add')
+  const addressSearch = document.querySelector('.address-block-search')
+  const formAddressSearch = document.querySelector(".js-search-form")
+  const addressList = document.querySelector(".address-block-list")
+
+  const deliveryBtn = document.querySelectorAll(".header__delivery-btn")
+  deliveryBtn[0].classList.add("active")
+
+  deliveryBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+      deliveryBtn.forEach(elem => elem.classList.remove("active"))
+      btn.classList.add("active");
+    })
+  })
 
   addressBtn.addEventListener('click', () => {
     addressBtn.parentElement.classList.contains("is-show") ? accordionNotActive(addressBtn) : accordionActive(addressBtn)
@@ -55,17 +94,31 @@ if (document.getElementById("index")) {
 
   addBtn.addEventListener('click', () => {
     addressSearch.classList.add('active');
+    setTimeout(() => {
+      formAddressSearch.querySelector("input").focus();
+    }, 300)
+  })
+
+  formAddressSearch.addEventListener('submit', e => {
+    e.preventDefault();
+    const input = formAddressSearch.querySelector("input")
+    const label = createLabel(input.value);
+    addressList.insertAdjacentHTML('beforeend', label);
+    input.value = "";
+    addressSearch.classList.remove("active");
   })
 
   document.addEventListener('click', (e) => {
     if (!sortModal.contains(e.target) && !btnSort.contains(e.target)) {
       sortModal.classList.remove("active")
+      document.body.classList.remove("lock")
     }
   })
 
   document.addEventListener('click', (e) => {
     if (!filterModal.contains(e.target) && !btnFilter.contains(e.target)) {
       filterModal.classList.remove("active")
+      document.body.classList.remove("lock")
     }
   })
 
@@ -79,8 +132,12 @@ if (document.getElementById("index")) {
 
 if (document.getElementById("authorization")) {
   const tel = document.querySelector(".authorization__input[type='tel']");
-  tel.addEventListener("input", (e) => {inputPhone(e)})
-  tel.addEventListener("keydown", (e) => {onePhoneKeyDown(e)})
+  tel.addEventListener("input", (e) => {
+    inputPhone(e)
+  })
+  tel.addEventListener("keydown", (e) => {
+    onePhoneKeyDown(e)
+  })
 }
 
 if (document.getElementById("basket")) {
@@ -96,23 +153,57 @@ if (document.getElementById("basket")) {
     countChange(counter, goods);
   })
 
-  basketDelete.addEventListener('click', () => {modalDelete.show()})
+  basketDelete.addEventListener('click', () => {
+    modalDelete.show()
+  })
 
-  const slider = initSwiper(".basket__swiper")
+  initArraySwiper();
 
   countChange(count)
+
+  const modalPhone = document.querySelector(".basket__confirm-modal")
+  const changePhoneBtn = document.querySelector(".basket__confirm-phone")
+  const phoneNum = document.querySelector(".basket__confirm-phone-num")
+  const inputTel = document.querySelector(".basket__confirm-modal-input")
+  const inputBtn = document.querySelector(".basket__confirm-modal-btn")
+
+  inputTel.addEventListener("input", (e) => {
+    inputPhone(e)
+  })
+  inputTel.addEventListener("keydown", (e) => {
+    onePhoneKeyDown(e)
+    if (e.keyCode === 13) {
+      phoneNum.textContent = inputTel.value
+      inputTel.value = ''
+      modalPhone.classList.remove("active");
+    }
+  })
+  inputBtn.addEventListener("click", () => {
+    phoneNum.textContent = inputTel.value
+    inputTel.value = ''
+    modalPhone.classList.remove("active");
+  })
+
+  changePhoneBtn.addEventListener("click", () => {
+    modalPhone.classList.add("active");
+  })
+
+  document.addEventListener("click", (e) => {
+    if (!modalPhone.contains(e.target) && !changePhoneBtn.contains(e.target)) {
+      modalPhone.classList.remove("active");
+    }
+  })
 }
 
 if (document.getElementById("success")) {
-  const slider = initSwiper(".success__ordered-swiper")
-
+  initArraySwiper();
   const btns = document.querySelectorAll('.success__grade-star');
   btns.forEach((btn, index) => {
     btn.addEventListener('click', () => {
       btns.forEach((elem, indexElem) => {
         if (indexElem <= index) {
           elem.classList.add("active");
-        } else  {
+        } else {
           elem.classList.remove("active")
         }
       })
@@ -122,31 +213,66 @@ if (document.getElementById("success")) {
 }
 
 if (document.getElementById("account")) {
-  const addAddress = document.querySelector('.account__address-add');
-  const modal = document.querySelector('.account__address-search');
-  const inputSearch = document.querySelector('.account__address-search-input')
-  const inputSearchBtn = document.querySelector('.account__address-search-btn')
+  const addBtn = document.querySelector('.address-block-add');
+  const addressSearch = document.querySelector('.address-block-search');
+  const formAddressSearch = document.querySelector(".js-search-form")
+  const addressList = document.querySelector(".address-block-list")
 
-  addAddress.addEventListener('click', () => {
-    modal.classList.add('active')
+  addBtn.addEventListener('click', () => {
+    addressSearch.classList.add('active');
+    setTimeout(() => {
+      formAddressSearch.querySelector("input").focus();
+    }, 300)
   })
 
-  inputSearch.addEventListener('input', () => showClear(inputSearch, inputSearchBtn))
-  inputSearchBtn.addEventListener('click', () => {
-    clearInput(inputSearch)
-    showClear(inputSearch, inputSearchBtn)
+  formAddressSearch.addEventListener('submit', e => {
+    e.preventDefault();
+    const input = formAddressSearch.querySelector("input")
+    const label = createLabel(input.value);
+    addressList.insertAdjacentHTML('beforeend', label);
+    input.value = "";
+    addressSearch.classList.remove("active");
   })
 
   document.addEventListener('click', (e) => {
-    if (!modal.contains(e.target) && !addAddress.contains(e.target)) {
-      modal.classList.remove('active')
+    if (!addressSearch.contains(e.target) && !addBtn.contains(e.target)) {
+      addressSearch.classList.remove('active')
+    }
+  })
+
+  const modalName = document.querySelector(".account__info-modal")
+  const changeNameBtn = document.querySelector(".account__info-name-wrap")
+  const nameSpan = document.querySelector(".account__info-name")
+  const inputName = document.querySelector(".account__info-modal-input")
+  const inputBtn = document.querySelector(".account__info-modal-btn")
+
+  inputBtn.addEventListener("click", () => {
+    nameSpan.textContent = inputName.value
+    inputName.value = "";
+    modalName.classList.remove("active");
+  })
+
+  inputName.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      nameSpan.textContent = inputName.value
+      inputName.value = "";
+      modalName.classList.remove("active");
+    }
+  })
+
+  changeNameBtn.addEventListener("click", () => {
+    modalName.classList.add("active");
+  })
+
+  document.addEventListener("click", (e) => {
+    if (!modalName.contains(e.target) && !changeNameBtn.contains(e.target)) {
+      modalName.classList.remove("active");
     }
   })
 }
 
 if (document.getElementById("stock")) {
-  const sliderOne = initSwiper('.stock__block-swiper')
-  const sliderTwo = initSwiper('.stock__block-swiper-2')
+  initArraySwiper();
 
   if (document.querySelector(".js-card")) {
     productCard();
@@ -160,30 +286,58 @@ if (document.getElementById("restaurant")) {
     productCard();
   }
 
-  const inputSearch = document.querySelector(".restaurant__settings-search-input")
-  const inputSearchBtn = document.querySelector(".restaurant__settings-search-btn")
   const btnSort = document.querySelector(".restaurant__settings-sort");
   const sortModal = document.querySelector(".sorting");
+  const scrollSort = document.querySelector(".sorting__box")
   const btnFilter = document.querySelector(".restaurant__settings-filter");
   const filterModal = document.querySelector(".filter");
+  const scrollFilter = document.querySelector(".filter__box");
 
 
-  inputSearch.addEventListener('input', () => showClear(inputSearch, inputSearchBtn))
-  inputSearchBtn.addEventListener('click', () => {
+  const inputSearch = document.querySelector('.search-input');
+  const btnClearSearch = document.querySelector('.search-input-clear')
+  const inputSearchList = document.querySelector('.search-input-list')
+  inputSearch.addEventListener('input', () => {
+    showClear(inputSearch, btnClearSearch)
+    if (inputSearch.value.length > 1) {
+      inputSearchList.classList.add("active");
+    } else {
+      inputSearchList.classList.remove("active");
+    }
+  })
+  btnClearSearch.addEventListener("click", () => {
     clearInput(inputSearch)
-    showClear(inputSearch, inputSearchBtn)
+    showClear(inputSearch, btnClearSearch)
+
+    if (inputSearch.value.length > 1) {
+      inputSearchList.classList.add("active");
+    } else {
+      inputSearchList.classList.remove("active");
+    }
   })
 
 
-  btnSort.addEventListener('click', () => {
+  btnSort.addEventListener('click', (e) => {
+    e.stopPropagation()
     openModal(sortModal)
+    scrollSort.scrollTo(0, 0)
+    document.body.classList.add('lock')
+    if (filterModal.classList.contains("active")) {
+      filterModal.classList.remove("active")
+    }
   })
-  btnFilter.addEventListener('click', () => {
+  btnFilter.addEventListener('click', (e) => {
+    e.stopPropagation()
     openModal(filterModal)
+    scrollFilter.scrollTo(0, 0)
+    document.body.classList.add('lock')
+    if (sortModal.classList.contains("active")) {
+      sortModal.classList.remove("active")
+    }
   })
 
-  setupModalEvents(sortModal)
-  setupModalEvents(filterModal)
+  setupModalEvents(sortModal, scrollSort)
+  setupModalEvents(filterModal, scrollFilter)
 
   const filterBtn = document.querySelectorAll('.filter__btn');
 
@@ -197,12 +351,15 @@ if (document.getElementById("restaurant")) {
   document.addEventListener('click', (e) => {
     if (!sortModal.contains(e.target) && !btnSort.contains(e.target)) {
       sortModal.classList.remove("active")
+      document.body.classList.remove("lock")
     }
   })
 
   document.addEventListener('click', (e) => {
     if (!filterModal.contains(e.target) && !btnFilter.contains(e.target)) {
       filterModal.classList.remove("active")
+      document.body.classList.remove("lock")
+
     }
   })
 
@@ -215,9 +372,7 @@ if (document.getElementById("restaurant")) {
     })
   })
 
-  const swiper  = initSwiper('.restaurant__stock-swiper')
-  const swiper2 = initSwiper('.restaurant__offers-swiper')
-  const swiper3 = initSwiper('.restaurant__offers-swiper-2')
+  initArraySwiper();
 
 }
 
@@ -231,9 +386,27 @@ if (document.getElementById("product")) {
     productCard();
   }
 
-  const swiper2 = initSwiper(".product__additional-swiper")
-  const swiper3 = initSwiper(".product__additional-swiper-2")
+  const btn = document.querySelector(".product__top-add")
+  const counter = document.querySelector(".product__top-counter")
+  const count = counter.querySelector("span");
+  const minus = counter.querySelector(".product__top-counter-minus");
+  const plus = counter.querySelector(".product__top-counter-plus");
+
+  btn.addEventListener("click", () => {
+    openCounter(btn, counter)
+  });
+
+  minus.addEventListener("click", () => {
+    changeCounter(count, btn, counter, "minus")
+  })
+
+  plus.addEventListener("click", () => {
+    changeCounter(count, btn, counter, "plus")
+  })
+
+  initArraySwiper();
 }
+
 // Функции
 function initSwiper(container) {
   return new Swiper(container, {
@@ -242,42 +415,56 @@ function initSwiper(container) {
   })
 }
 
+function initArraySwiper() {
+  if (document.querySelector(".js-swiper-init")) {
+    const swiperBlock = document.querySelectorAll(".js-swiper-init");
+    swiperBlock.forEach(elem => {
+      const swiper = initSwiper(elem)
+    })
+  }
+}
+
 function stopPropagation(event) {
   event.stopPropagation();
 }
 
 function handleTouchStart(event) {
   this.startY = event.touches[0].clientY;
+
 }
 
-function handleTouchMove(event) {
+function handleTouchMove(event, scroll) {
   let endY = event.touches[0].clientY;
-  if (endY > this.startY) {
+  if (endY > this.startY && scroll.scrollTop === 0) {
     this.classList.remove("active");
-    document.body.classList.remove("lock")
+    setTimeout(() => {
+      document.body.classList.remove("lock")
+    }, 300)
   }
 }
+
 
 function handleMouseDown(event) {
   this.startY = event.clientY;
   this.isDragging = true;
 }
 
-function handleMouseMove(event) {
+function handleMouseMove(event, scroll) {
   if (this.isDragging) {
     let endY = event.clientY;
     let deltaY = endY - this.startY;
-    if (deltaY > 0) {
+    if (deltaY > 0 && scroll.scrollTop === 0) {
       this.style.bottom = -deltaY + "px";
     }
   }
 }
 
-function handleMouseUp(event) {
+function handleMouseUp(event, scroll) {
   if (this.isDragging) {
     let endY = event.clientY;
     let deltaY = endY - this.startY;
-    if (deltaY > 50) {
+    console.log(scroll.scrollTop)
+    if (deltaY > 50 && scroll.scrollTop === 0) {
       this.classList.remove("active");
       document.body.classList.remove("lock")
     } else {
@@ -287,17 +474,22 @@ function handleMouseUp(event) {
   }
 }
 
-function setupModalEvents(modal) {
-
+function setupModalEvents(modal, scroll) {
 
   modal.addEventListener("click", stopPropagation);
+  scroll.addEventListener("touchstart", stopPropagation)
 
   modal.addEventListener("touchstart", handleTouchStart);
-  modal.addEventListener("touchmove", handleTouchMove);
-
+  modal.addEventListener("touchmove", function (event) {
+    handleTouchMove.call(modal, event, scroll);
+  });
   modal.addEventListener("mousedown", handleMouseDown);
-  modal.addEventListener("mousemove", handleMouseMove);
-  modal.addEventListener("mouseup", handleMouseUp);
+  modal.addEventListener("mousemove", function (event) {
+    handleMouseMove.call(modal, event, scroll);
+  });
+  modal.addEventListener("mouseup", function (event) {
+    handleMouseUp.call(modal, event, scroll);
+  });
 }
 
 function openModal(modal) {
@@ -351,7 +543,7 @@ function inputPhone(e) {
   input.value = formattedInputValue
 }
 
-function onePhoneKeyDown (e) {
+function onePhoneKeyDown(e) {
   let input = e.target;
   if (regPhone(input).length == 1 && e.keyCode === 8) {
     input.value = '';
@@ -435,7 +627,7 @@ function changeCounter(span, btn, counter, operator) {
   if (operator === "plus") {
     num += 1
   } else {
-    num -=1
+    num -= 1
   }
 
   num < 1 ? closeCounter(btn, counter) : span.textContent = num
@@ -444,21 +636,40 @@ function changeCounter(span, btn, counter, operator) {
 function productCard() {
   const cards = document.querySelectorAll(".js-card");
   cards.forEach(elem => {
+    const btnWrap = elem.querySelector(".js-card-btns")
     const btn = elem.querySelector(".js-card-add")
     const counter = elem.querySelector(".js-card-counter")
-    const btnWrap = elem.querySelector(".js-card-btns")
     const count = counter.querySelector("span");
     const minus = counter.querySelector(".js-card-minus");
     const plus = counter.querySelector(".js-card-plus");
 
-    btn.addEventListener("click", () => {openCounter(btn, counter)});
-
     btnWrap.addEventListener("click", e => {
       e.preventDefault();
     })
+    btn.addEventListener("click", () => {
+      openCounter(btn, counter)
+    });
 
-    minus.addEventListener("click", () => {changeCounter(count, btn, counter, "minus")})
+    minus.addEventListener("click", () => {
+      changeCounter(count, btn, counter, "minus")
+    })
 
-    plus.addEventListener("click", () => {changeCounter(count, btn, counter, "plus")})
+    plus.addEventListener("click", () => {
+      changeCounter(count, btn, counter, "plus")
+    })
   })
+}
+
+
+
+function createLabel(text) {
+  return `
+    <label class="address__label">
+      <input type="radio" name="address" class="address__input"/>
+      <span class="address__radio"></span>
+      <span class="address__text text-16">
+        ${text}
+      </span>
+    </label>  
+  `
 }

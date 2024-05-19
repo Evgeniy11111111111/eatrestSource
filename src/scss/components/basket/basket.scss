@@ -159,6 +159,56 @@
     &-list {
       gap: var(--gap-15);
     }
+
+    &-phone {
+      margin-top: var(--gap-5);
+      gap: var(--gap-10);
+
+      &-wrap {
+        position: relative;
+      }
+
+      &-num {
+        z-index: 2;
+      }
+
+    }
+    &-modal {
+      position: absolute;
+      background-color: var(--white);
+      border-radius: var(--radius-10);
+      left: -20px;
+      right: -20px;
+      z-index: 1;
+      top: -5px;
+      padding: 40px 20px 20px;
+      box-shadow: 0px 5px 15px 0px #00000026;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--gap-20);
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(.7);
+      transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+
+      &-input {
+        @include input(10px);
+        text-align: center;
+      }
+
+      &-btn {
+        @include btnChevronRight;
+        background-color: var(--orange);
+        flex-shrink: 0;
+      }
+    }
+
+    &-modal.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
   }
 
   &__modal {
