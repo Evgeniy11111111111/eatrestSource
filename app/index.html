@@ -1,1 +1,790 @@
-<!DOCTYPE html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Eatrest</title><link rel="stylesheet" href="./bootstrap/bootstrap.min.css"><link rel="stylesheet" href="./swiper/swiper-bundle.min.css"><link rel="stylesheet" href="./css/main.css"><script defer="defer" src="./bootstrap/bootstrap.bundle.min.js"></script><script defer="defer" src="./swiper/swiper-bundle.min.js"></script><script defer="defer" src="./swipe/swiped-events.min.js"></script><script defer="defer" src="./js/main.js"></script></head><body id="index"><div class="site-container"><header class="header"><div class="custom-container container-fluid"><div class="header__content d-flex flex-column"><div class="header__top d-flex align-items-center justify-content-between"><div class="address-block"><button class="btn-reset address-block-btn d-flex align-items-center"><span class="address-block-btn-text text-start text-14-medium">Комсомольская, 192 фывйфывvasda asdasd asdasd</span> <span class="address-block-btn-svg"><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 1.5L8 8.5L1 1.5" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="address-block-block"><div class="address-block-wrap"><div class="address-block-list"><label class="address__label"><input type="radio" name="address" class="address__input"> <span class="address__radio"></span> <span class="address__text text-16">Пенза, Комсомольская, 192</span></label> <label class="address__label"><input type="radio" name="address" class="address__input"> <span class="address__radio"></span> <span class="address__text text-16">Пенза, Мира, 1</span></label> <label class="address__label"><input type="radio" name="address" class="address__input"> <span class="address__radio"></span> <span class="address__text text-16">Пенза, Ленина, 5</span></label></div><button class="address-block-add second-btn btn-reset">Добавить новый адрес</button></div></div><div class="address-block-search"><form class="address-block-search-top js-search-form d-flex align-items-center"><input placeholder="Введите новый адрес" class="address-block-search-input"> <button type="submit" class="address-block-search-btn btn-reset"><svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L8 8L1 15" stroke="#F7F7F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form><ul class="address-block-search-list list-reset"><li class="address-block-search-item text-14">+7 (000) 000-00-02</li><li class="address-block-search-item text-14">+7 (000) 000-00-02</li><li class="address-block-search-item text-14">+7 (000) 000-00-02</li><li class="address-block-search-item text-14">+7 (000) 000-00-02</li></ul></div></div></div><div class="header__mid"><div class="header__delivery d-flex align-items-center"><div class="header__delivery-btn text-16">Доставка</div><span class="header__delivery-slash text-16-bold text-orange">/</span><div class="header__delivery-btn text-16">Самовывоз</div></div></div><div class="header__bottom"><div class="search-input-block"><form class="search-input-wrap"><input type="text" placeholder="Найти что-то вкусное" class="search-input"><div class="header__search"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.3276 12.3276L17 17" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/><circle cx="7.60777" cy="7.60777" r="6.60777" fill="#F2F2F2" stroke="#FF6B00" stroke-width="1.5"/></svg></div><button type="button" disabled="disabled" class="search-input-clear btn-reset"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L13 13" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/><path d="M13 1L1 13" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/></svg></button></form><div class="search-input-list d-flex flex-column"><div class="search-input-item"><div class="search-input-item-img"></div><div class="search-input-item-info"><h3 class="search-input-item-title">Супер-пупер длинное название блюда</h3><div class="search-input-item-info-mid"><span class="search-input-item-weight">000 г</span></div><div class="search-input-item-info-bottom"><span class="search-input-item-count">1 шт.</span> <span class="search-input-item-price">0000 ₽</span></div></div></div><div class="search-input-item"><div class="search-input-item-img"></div><div class="search-input-item-info"><h3 class="search-input-item-title">Супер-пупер длинное название блюда</h3><div class="search-input-item-info-mid"><span class="search-input-item-weight">000 г</span></div><div class="search-input-item-info-bottom"><span class="search-input-item-count">1 шт.</span> <span class="search-input-item-price">0000 ₽</span></div></div></div><div class="search-input-item"><div class="search-input-item-img"></div><div class="search-input-item-info"><h3 class="search-input-item-title">Супер-пупер длинное название блюда</h3><div class="search-input-item-info-mid"><span class="search-input-item-weight">000 г</span></div><div class="search-input-item-info-bottom"><span class="search-input-item-count">1 шт.</span> <span class="search-input-item-price">0000 ₽</span></div></div></div></div></div></div></div></div></header><main class="main"><section class="main-stock"><div class="custom-container container-fluid"><div class="main-stock__content"><h2 class="main-stock__title text-16-bold">Рестораны с <span class="main-stock__title-orange text-orange">акциями</span> и скидками</h2><div class="main-stock__box d-flex flex-column"><div class="main-stock__block"><h3 class="main-stock__title-second text-16-medium">Акция <span class="text-orange">«1+1»</span></h3><div class="main-stock__swiper js-swiper-init swiper"><div class="main-stock__wrapper swiper-wrapper"><a href="stock.html" class="swiper-slide card-restaurant"><div><img src="./img/img.png"><div class="card-restaurant-close">Закрыто<br>до завтра</div></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Название</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div><img src="./img/img.png"></div><div class="card-restaurant-name">Длинное название ресторана</div></a></div></div></div><div class="main-stock__block"><h3 class="main-stock__title-second text-16-medium">Акция <span class="text-orange">«Блюдо в подарок»</span></h3><div class="main-stock__swiper js-swiper-init swiper"><div class="main-stock__wrapper swiper-wrapper"><a href="stock.html" class="swiper-slide card-restaurant"><div><img src="./img/img.png"></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Название</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div><img src="./img/img.png"></div><div class="card-restaurant-name">Длинное название ресторана</div></a></div></div></div><div class="main-stock__block"><h3 class="main-stock__title-second text-16-medium">Акция <span class="text-orange">«Повышенные баллы»</span></h3><div class="main-stock__swiper js-swiper-init swiper"><div class="main-stock__wrapper swiper-wrapper"><a href="stock.html" class="swiper-slide card-restaurant"><div><img src="./img/img.png"></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Название</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div></div><div class="card-restaurant-name">Длинное название ресторана</div></a><a href="stock.html" class="swiper-slide card-restaurant"><div><img src="./img/img.png"></div><div class="card-restaurant-name">Длинное название ресторана</div></a></div></div></div><div class="main-stock__block"><h3 class="main-stock__title-second text-16-bold">Подойдёт для <span class="text-orange">завтрака</span></h3><div class="main-stock__swiper js-swiper-init swiper"><div class="main-stock__wrapper swiper-wrapper"><div class="card-restaurant-big swiper-slide"><div><img src="./img/img.png"></div><div class="card-restaurant-big-name">Длинное название ресторана</div></div><div class="card-restaurant-big swiper-slide"><div></div><div class="card-restaurant-big-name">Название ресторана</div></div><div class="card-restaurant-big swiper-slide"><div></div><div class="card-restaurant-big-name">Длинное название ресторана</div></div><div class="card-restaurant-big swiper-slide"><div><img src="./img/img.png"></div><div class="card-restaurant-big-name">Длинное название ресторана</div></div></div></div></div><div class="main-stock__block"><h3 class="main-stock__title-second text-16-bold">Ваши <span class="text-orange">любимые</span> рестораны</h3><div class="main-stock__swiper js-swiper-init swiper"><div class="main-stock__wrapper swiper-wrapper"><div class="card-restaurant-big swiper-slide"><div><img src="./img/img.png"><div class="maim-stock__slide-close card-restaurant-big-close text-14">Закрыто<br>до завтра</div></div><div class="card-restaurant-big-name">Длинное название ресторана</div></div><div class="card-restaurant-big swiper-slide"><div></div><div class="card-restaurant-big-name">Название ресторана</div></div><div class="card-restaurant-big swiper-slide"><div></div><div class="card-restaurant-big-name">Длинное название ресторана</div></div><div class="card-restaurant-big swiper-slide"><div><img src="./img/img.png"></div><div class="card-restaurant-big-name">Длинное название ресторана</div></div></div></div></div></div></div></div></section><section class="restaurants"><div class="container-fluid custom-container"><div class="restaurants__content d-flex flex-column"><h2 class="restaurants__title text-16-bold"><span class="text-orange">Все</span> рестораны</h2><div class="restaurants__settings d-flex align-items-center justify-content-between"><button class="restaurants__filter btn-reset"><span class="restaurants__filter-svg"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.20001H17" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><path d="M1 13.8H17" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><circle cx="6.79998" cy="4.2" r="3.2" fill="white" stroke="#333333" stroke-width="1.5"/><circle cx="11.2" cy="13.8" r="3.2" fill="white" stroke="#333333" stroke-width="1.5"/></svg> </span><span class="restaurants__filter-text text-14-medium">Отфильтровать</span></button> <button class="restaurants__sort btn-reset"><span class="restaurants__filter-svg"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.2 17L4.2 1M4.2 1L1 4.2M4.2 1L7.4 4.2" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.8 17V1M13.8 17L10.6 13.8M13.8 17L17 13.8" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> </span><span class="restaurants__filter-text text-14-medium">Отсортировать</span></button></div><div class="restaurants__filters"><h3 class="restaurants__title-second text-1">Блюда и кухни</h3><div class="restaurants__filters-list d-flex"><button class="restaurants__filters-btn active btn-reset">Кухня</button> <button class="restaurants__filters-btn btn-reset">Блюдооо</button> <button class="restaurants__filters-btn btn-reset">Кухня</button> <button class="restaurants__filters-btn btn-reset">Блюдооо</button> <button class="restaurants__filters-btn btn-reset">Кухня</button> <button class="restaurants__filters-btn btn-reset">Блюдооо</button></div></div><div class="restaurants__list d-flex flex-column"><a class="restaurants__card"><div class="restaurants__card-img"><div class="restaurants__card-sale"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 15L15 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/><circle cx="3" cy="4" r="2.25" stroke="white" stroke-width="1.5"/><circle cx="13" cy="12" r="2.25" stroke="white" stroke-width="1.5"/></svg></div><div class="restaurants__card-like"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.49355 8.82282L8.01761 13.7654C8.40494 14.112 8.99318 14.104 9.37103 13.7472L14.5796 8.82801C15.4862 7.97174 16 6.77976 16 5.53269V4.8333C16 2.71622 14.2838 1 12.1667 1C11.0022 1 9.90085 1.52934 9.1734 2.43866L8.88931 2.79377C8.79364 2.91335 8.61176 2.91335 8.5161 2.79377L8.31421 2.54142C7.5348 1.56715 6.35478 1 5.1071 1C2.83881 1 1 2.83882 1 5.10711V5.48237C1 6.75762 1.54318 7.97249 2.49355 8.82282Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><img src="./img/img.png"><div class="restaurants__card-close">Закрыто до завтра</div></div><div class="restaurants__card-info"><div class="restaurants__card-info-top"><h3 class="restaurants__card-info-title text-14-medium">Длинное название ресторана</h3><div class="restaurants__card-info-rate"><div class="restaurants__card-info-rate-svg"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 12V6.80554" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/><path d="M5 12V1" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/><path d="M9 12V4.36108" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/><path d="M13 12V9.25" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="restaurants__card-info-rate-num text-gray-dark text-14">0,0</div></div></div><div class="restaurants__card-info-bottom"><p class="restaurants__card-info-kitchen text-12 text-gray-dark">Вид кухни, категория блюд 1, категория блюд 2</p><span class="restaurants__card-info-time text-12 text-gray-dark">00 минут</span></div></div></a><a class="restaurants__card"><div class="restaurants__card-img"><div class="restaurants__card-sale"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 15L15 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/><circle cx="3" cy="4" r="2.25" stroke="white" stroke-width="1.5"/><circle cx="13" cy="12" r="2.25" stroke="white" stroke-width="1.5"/></svg></div><div class="restaurants__card-like"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.49355 8.82282L8.01761 13.7654C8.40494 14.112 8.99318 14.104 9.37103 13.7472L14.5796 8.82801C15.4862 7.97174 16 6.77976 16 5.53269V4.8333C16 2.71622 14.2838 1 12.1667 1C11.0022 1 9.90085 1.52934 9.1734 2.43866L8.88931 2.79377C8.79364 2.91335 8.61176 2.91335 8.5161 2.79377L8.31421 2.54142C7.5348 1.56715 6.35478 1 5.1071 1C2.83881 1 1 2.83882 1 5.10711V5.48237C1 6.75762 1.54318 7.97249 2.49355 8.82282Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div></div><div class="restaurants__card-info"><div class="restaurants__card-info-top"><h3 class="restaurants__card-info-title text-14-medium">Длинное название ресторана</h3><div class="restaurants__card-info-rate"><div class="restaurants__card-info-rate-svg"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 12V6.80554" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/><path d="M5 12V1" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/><path d="M9 12V4.36108" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/><path d="M13 12V9.25" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="restaurants__card-info-rate-num text-gray-dark text-14">0,0</div></div></div><div class="restaurants__card-info-bottom"><p class="restaurants__card-info-kitchen text-12 text-gray-dark">Вид кухни, категория блюд 1, категория блюд 2</p><span class="restaurants__card-info-time text-12 text-gray-dark">00 минут</span></div></div></a><a class="restaurants__card"><div class="restaurants__card-img"><div class="restaurants__card-sale"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 15L15 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/><circle cx="3" cy="4" r="2.25" stroke="white" stroke-width="1.5"/><circle cx="13" cy="12" r="2.25" stroke="white" stroke-width="1.5"/></svg></div><div class="restaurants__card-like"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.49355 8.82282L8.01761 13.7654C8.40494 14.112 8.99318 14.104 9.37103 13.7472L14.5796 8.82801C15.4862 7.97174 16 6.77976 16 5.53269V4.8333C16 2.71622 14.2838 1 12.1667 1C11.0022 1 9.90085 1.52934 9.1734 2.43866L8.88931 2.79377C8.79364 2.91335 8.61176 2.91335 8.5161 2.79377L8.31421 2.54142C7.5348 1.56715 6.35478 1 5.1071 1C2.83881 1 1 2.83882 1 5.10711V5.48237C1 6.75762 1.54318 7.97249 2.49355 8.82282Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><img src="./img/img.png"></div><div class="restaurants__card-info"><div class="restaurants__card-info-top"><h3 class="restaurants__card-info-title text-14-medium">Длинное название ресторана</h3><div class="restaurants__card-info-rate"><div class="restaurants__card-info-rate-svg"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 12V6.80554" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/><path d="M5 12V1" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/><path d="M9 12V4.36108" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/><path d="M13 12V9.25" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="restaurants__card-info-rate-num text-gray-dark text-14">0,0</div></div></div><div class="restaurants__card-info-bottom"><p class="restaurants__card-info-kitchen text-12 text-gray-dark">Вид кухни, категория блюд 1, категория блюд 2</p><span class="restaurants__card-info-time text-12 text-gray-dark">00 минут</span></div></div></a></div></div></div></section><div class="sorting__wrap"><div class="sorting"><div class="custom-container container-fluid"><div class="sorting__touch" data-swipe-threshold="20" data-swipe-timeout="500" data-swipe-ignore="false"><div class="sorting__touch-strip"></div></div><div class="sorting__content"><div class="sorting__box"><div class="sorting__block"><label class="sorting__label"><input type="radio" name="По умолчанию" class="sorting__input"> <span class="sorting__radio"></span> <span class="sorting__text text-16-bold">По умолчанию</span></label></div><div class="sorting__block"><h3 class="sorting__block-title text-16-bold">По рейтингу</h3><div class="sorting__block-list d-flex flex-column"><label class="sorting__label"><input type="radio" name="rating" class="sorting__input"> <span class="sorting__radio"></span> <span class="sorting__text text-16">Сначала с высоким рейтингом</span></label> <label class="sorting__label"><input type="radio" name="rating" class="sorting__input"> <span class="sorting__radio"></span> <span class="sorting__text text-16">Сначала с низким рейтингом</span></label></div></div><div class="sorting__block"><h3 class="sorting__block-title text-16-bold">По скорости доставки</h3><div class="sorting__block-list d-flex flex-column"><label class="sorting__label"><input type="radio" name="speed" class="sorting__input"> <span class="sorting__radio"></span> <span class="sorting__text text-16">Сначала с быстрой доставкой</span></label> <label class="sorting__label"><input type="radio" name="speed" class="sorting__input"> <span class="sorting__radio"></span> <span class="sorting__text text-16">Сначала с медленной доставкой</span></label></div></div><div class="sorting__block"><h3 class="sorting__block-title text-16-bold">По минимальной сумме заказа</h3><div class="sorting__block-list d-flex flex-column"><label class="sorting__label"><input type="radio" name="sum" class="sorting__input"> <span class="sorting__radio"></span> <span class="sorting__text text-16">Сначала с наименьшей минимальной суммой заказа</span></label> <label class="sorting__label"><input type="radio" name="sum" class="sorting__input"> <span class="sorting__radio"></span> <span class="sorting__text text-16">Сначала с наибольшей минимальной суммой заказа</span></label></div></div><div class="sorting__block"><h3 class="sorting__block-title text-16-bold">По дороговизне</h3><div class="sorting__block-list d-flex flex-column"><label class="sorting__label"><input type="radio" name="expensive" class="sorting__input"> <span class="sorting__radio"></span> <span class="sorting__text text-16">Сначала дорогие</span></label> <label class="sorting__label"><input type="radio" name="expensive" class="sorting__input"> <span class="sorting__radio"></span> <span class="sorting__text text-16">Сначала недорогие</span></label></div></div></div></div></div></div></div><div class="filter__wrap"><div class="filter"><div class="custom-container container-fluid"><div class="filter__touch"><div class="filter__touch-strip"></div></div><div class="filter__content"><div class="filter__box d-flex flex-wrap"><button class="filter__btn btn-reset active">Рекомендуем</button> <button class="filter__btn btn-reset">Новые рестораны</button> <button class="filter__btn btn-reset">Есть акции</button> <button class="filter__btn btn-reset">Еще какой-нибудь фильтр</button></div></div></div></div></div></main><footer class="footer"><div class="container-fluid custom-container"><div class="footer__content"><nav class="footer__nav"><ul class="footer__list list-reset d-flex align-items-center justify-content-between"><li class="footer__item"><a href="account.html" class="footer__link d-flex align-items-center justify-content-center"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.3379 19H2.66207C2.0718 19 1.63868 18.4453 1.78184 17.8726L1.80225 17.791C2.80003 13.7999 6.38605 11 10.5 11C14.6139 11 18.2 13.7999 19.1977 17.791L19.2182 17.8726C19.3613 18.4453 18.9282 19 18.3379 19Z" stroke="#FF6B00" stroke-width="2" stroke-linejoin="round"/><circle cx="10.5" cy="6" r="5" stroke="#FF6B00" stroke-width="2"/></svg></a></li><li class="footer__item"><a href="like.html" class="footer__link d-flex align-items-center justify-content-center"><svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75903 11.822L10.8201 18.3695C11.2036 18.7252 11.7964 18.7252 12.1799 18.3695L19.241 11.822C20.6814 10.4864 21.5 8.61087 21.5 6.64651V6.15438C21.5 3.30769 19.1923 1 16.3456 1C14.5745 1 12.9275 1.9093 11.9838 3.40806L11.7515 3.77702C11.6349 3.96215 11.3651 3.96215 11.2485 3.77702L11.0162 3.40806C10.0725 1.9093 8.42547 1 6.65438 1C3.80769 1 1.5 3.30769 1.5 6.15438V6.6465C1.5 8.61086 2.31863 10.4864 3.75903 11.822Z" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/></svg> <span class="footer__link-count">10</span></a></li><li class="footer__item"><a href="/" class="footer__link d-flex align-items-center justify-content-center"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.5 8.48908V18C19.5 18.5523 19.0523 19 18.5 19H15H14.5C13.9477 19 13.5 18.5523 13.5 18V13C13.5 12.4477 13.0523 12 12.5 12H8.5C7.94772 12 7.5 12.4477 7.5 13V18C7.5 18.5523 7.05228 19 6.5 19H6H2.5C1.94772 19 1.5 18.5523 1.5 18V8.48908C1.5 8.18049 1.64247 7.88919 1.88606 7.69973L9.88606 1.47751C10.2472 1.19665 10.7528 1.19665 11.1139 1.47751L19.1139 7.69973C19.3575 7.88919 19.5 8.18049 19.5 8.48908Z" stroke="#FF6B00" stroke-width="2" stroke-linejoin="round"/></svg></a></li><li class="footer__item"><a href="basket.html" class="footer__link d-flex align-items-center justify-content-center"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.02082 0.184993C9.48035 0.491346 9.60452 1.11222 9.29817 1.57174L7.86007 3.72889H13.1399L11.7018 1.57174C11.3955 1.11222 11.5197 0.491346 11.9792 0.184993C12.4387 -0.121359 13.0596 0.00281458 13.3659 0.462343L15.5436 3.72889H18.6694C19.774 3.72889 20.6694 4.62432 20.6694 5.72889V8.50852C20.6694 9.61308 19.774 10.5085 18.6694 10.5085H18.6345L18.5694 10.8663L17.3628 17.5028C17.1034 18.9292 15.861 19.9661 14.4112 19.9661H6.58884C5.13898 19.9661 3.89659 18.9292 3.63723 17.5028L2.4306 10.8663L2.36555 10.5085H2.33057C1.226 10.5085 0.330566 9.61309 0.330566 8.50852V5.7289C0.330566 4.62433 1.226 3.72889 2.33057 3.72889H5.45637L7.63407 0.462343C7.94042 0.00281458 8.56129 -0.121359 9.02082 0.184993ZM2.33057 5.72889H18.6694V8.50852L16.6017 8.50852H4.39834L2.33057 8.50852V5.72889ZM4.39834 10.5085L4.76198 12.5085L5.60497 17.145C5.69143 17.6205 6.10556 17.9661 6.58884 17.9661H14.4112C14.8945 17.9661 15.3086 17.6205 15.395 17.145L16.238 12.5085L16.6017 10.5085H14.5689H6.43113H4.39834ZM8.46612 12.2204C9.0184 12.2204 9.46612 12.6681 9.46612 13.2204V15.2543C9.46612 15.8065 9.0184 16.2543 8.46612 16.2543C7.91383 16.2543 7.46612 15.8065 7.46612 15.2543V13.2204C7.46612 12.6681 7.91383 12.2204 8.46612 12.2204ZM13.5339 13.2204C13.5339 12.6681 13.0862 12.2204 12.5339 12.2204C11.9816 12.2204 11.5339 12.6681 11.5339 13.2204V15.2543C11.5339 15.8065 11.9816 16.2543 12.5339 16.2543C13.0862 16.2543 13.5339 15.8065 13.5339 15.2543V13.2204Z" fill="#FF6B00"/></svg> <span class="footer__link-count">10</span></a></li><li class="footer__item"><a class="footer__link d-flex align-items-center justify-content-center"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 19H16.5C18.1569 19 19.5 17.6569 19.5 16V2C19.5 1.44772 19.0523 1 18.5 1H6.5C5.94772 1 5.5 1.44772 5.5 2V6.29412M5.5 19V6.29412M5.5 19H3.5M5.5 6.29412H2.5C1.94772 6.29412 1.5 6.74183 1.5 7.29412V16.8824C1.5 18.0519 2.39543 19 3.5 19M5.5 6.29412V16.8824C5.5 18.0519 4.60457 19 3.5 19M9.5 6.29412H15.5M9.5 10.5294H12.5" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li></ul></nav></div></div></footer></div></body><script></script>
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Eatrest</title>
+
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <script defer src="./bootstrap/bootstrap.bundle.min.js"></script>
+  <script defer src="./swiper/swiper-bundle.min.js"></script>
+  <script defer src="./swipe/swiped-events.min.js"></script>
+  <script defer src="./js/main.js"></script>
+</head>
+
+
+<body id="index">
+  <div class="site-container">
+    <header class="header">
+      <div class="custom-container container-fluid">
+  <div class="header__content d-flex flex-column">
+    <div class="header__top d-flex align-items-center justify-content-between">
+      <div class="address-block">
+        <button class="btn-reset address-block-btn d-flex align-items-center">
+          <span class="address-block-btn-text text-start text-14-medium">Комсомольская, 192 фывйфывvasda asdasd asdasd</span>
+          <span class="address-block-btn-svg">
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 1.5L8 8.5L1 1.5" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="address-block-block">
+          <div class="address-block-wrap">
+            <div class="address-block-list">
+              <label class="address__label">
+                <input type="radio" name="address" class="address__input">
+                <span class="address__radio"></span>
+                <span class="address__text text-16">
+                Пенза, Комсомольская, 192
+              </span>
+              </label>
+              <label class="address__label">
+                <input type="radio" name="address" class="address__input">
+                <span class="address__radio"></span>
+                <span class="address__text text-16">
+                Пенза, Мира, 1
+              </span>
+              </label>
+              <label class="address__label">
+                <input type="radio" name="address" class="address__input">
+                <span class="address__radio"></span>
+                <span class="address__text text-16">
+                Пенза, Ленина, 5
+              </span>
+              </label>
+            </div>
+            <button class="address-block-add second-btn btn-reset">
+              Добавить новый адрес
+            </button>
+          </div>
+        </div>
+        <div class="address-block-search">
+          <form class="address-block-search-top js-search-form d-flex align-items-center">
+            <input placeholder="Введите новый адрес" class="address-block-search-input">
+            <button type="submit" class="address-block-search-btn btn-reset">
+              <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L8 8L1 15" stroke="#F7F7F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+          <ul class="address-block-search-list list-reset">
+            <li class="address-block-search-item text-14">
+              +7 (000) 000-00-02
+            </li>
+            <li class="address-block-search-item text-14">
+              +7 (000) 000-00-02
+            </li>
+            <li class="address-block-search-item text-14">
+              +7 (000) 000-00-02
+            </li>
+            <li class="address-block-search-item text-14">
+              +7 (000) 000-00-02
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header__mid">
+      <div class="header__delivery d-flex align-items-center">
+        <div class="header__delivery-btn text-16">
+          Доставка
+        </div>
+        <span class="header__delivery-slash text-16-bold text-orange">/</span>
+        <div class="header__delivery-btn text-16">
+          Самовывоз
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="search-input-block">
+        <form class="search-input-wrap">
+          <input type="text" placeholder="Найти что-то вкусное" class="search-input">
+          <div class="header__search">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.3276 12.3276L17 17" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="7.60777" cy="7.60777" r="6.60777" fill="#F2F2F2" stroke="#FF6B00" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <button type="button" disabled class="search-input-clear btn-reset">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L13 13" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M13 1L1 13" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </form>
+        <div class="search-input-list d-flex flex-column">
+          <div class="search-input-item">
+            <div class="search-input-item-img"></div>
+            <div class="search-input-item-info">
+              <h3 class="search-input-item-title">
+                Супер-пупер длинное название блюда
+              </h3>
+              <div class="search-input-item-info-mid">
+                <span class="search-input-item-weight">000 г</span>
+              </div>
+              <div class="search-input-item-info-bottom">
+                <span class="search-input-item-count">1 шт.</span>
+                <span class="search-input-item-price">0000 ₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="search-input-item">
+            <div class="search-input-item-img"></div>
+            <div class="search-input-item-info">
+              <h3 class="search-input-item-title">
+                Супер-пупер длинное название блюда
+              </h3>
+              <div class="search-input-item-info-mid">
+                <span class="search-input-item-weight">000 г</span>
+              </div>
+              <div class="search-input-item-info-bottom">
+                <span class="search-input-item-count">1 шт.</span>
+                <span class="search-input-item-price">0000 ₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="search-input-item">
+            <div class="search-input-item-img"></div>
+            <div class="search-input-item-info">
+              <h3 class="search-input-item-title">
+                Супер-пупер длинное название блюда
+              </h3>
+              <div class="search-input-item-info-mid">
+                <span class="search-input-item-weight">000 г</span>
+              </div>
+              <div class="search-input-item-info-bottom">
+                <span class="search-input-item-count">1 шт.</span>
+                <span class="search-input-item-price">0000 ₽</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </header>
+    <main class="main">
+      <section class="main-stock">
+  <div class="custom-container container-fluid">
+    <div class="main-stock__content">
+      <h2 class="main-stock__title text-16-bold">
+        Рестораны с <span class="main-stock__title-orange text-orange">акциями</span> и скидками
+      </h2>
+      <div class="main-stock__box d-flex flex-column">
+        <div class="main-stock__block">
+          <h3 class="main-stock__title-second text-16-medium">
+            Акция <span class="text-orange">«1+1»</span>
+          </h3>
+          <div class="main-stock__swiper js-swiper-init swiper">
+            <div class="main-stock__wrapper swiper-wrapper">
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                  <img src="./img/img.png">
+                  <div class="card-restaurant-close">
+                    Закрыто
+                    <br/>
+                    до завтра
+                  </div>
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Название
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                  <img src="./img/img.png">
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="main-stock__block">
+          <h3 class="main-stock__title-second text-16-medium">
+            Акция <span class="text-orange">«Блюдо в подарок»</span>
+          </h3>
+          <div class="main-stock__swiper js-swiper-init swiper">
+            <div class="main-stock__wrapper swiper-wrapper">
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                  <img src="./img/img.png">
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Название
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                  <img src="./img/img.png">
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="main-stock__block">
+          <h3 class="main-stock__title-second text-16-medium">
+            Акция <span class="text-orange">«Повышенные баллы»</span>
+          </h3>
+          <div class="main-stock__swiper js-swiper-init swiper">
+            <div class="main-stock__wrapper swiper-wrapper">
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                  <img src="./img/img.png">
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Название
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+              <a href="stock.html" class="swiper-slide card-restaurant">
+                <div>
+                  <img src="./img/img.png">
+                </div>
+                <div class="card-restaurant-name">
+                  Длинное название ресторана
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="main-stock__block">
+          <h3 class="main-stock__title-second text-16-bold">
+            Подойдёт для <span class="text-orange">завтрака</span>
+          </h3>
+          <div class="main-stock__swiper js-swiper-init swiper">
+            <div class="main-stock__wrapper swiper-wrapper">
+              <div class="card-restaurant-big swiper-slide">
+                <div>
+                  <img src="./img/img.png">
+                </div>
+                <div class="card-restaurant-big-name">
+                  Длинное название ресторана
+                </div>
+              </div>
+              <div class="card-restaurant-big swiper-slide">
+                <div>
+                </div>
+                <div class="card-restaurant-big-name">
+                  Название ресторана
+                </div>
+              </div>
+              <div class="card-restaurant-big swiper-slide">
+                <div>
+                </div>
+                <div class="card-restaurant-big-name">
+                  Длинное название ресторана
+                </div>
+              </div>
+              <div class="card-restaurant-big swiper-slide">
+                <div>
+                  <img src="./img/img.png">
+                </div>
+                <div class="card-restaurant-big-name">
+                  Длинное название ресторана
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-stock__block">
+          <h3 class="main-stock__title-second text-16-bold">
+            Ваши <span class="text-orange">любимые</span> рестораны
+          </h3>
+          <div class="main-stock__swiper js-swiper-init swiper">
+            <div class="main-stock__wrapper swiper-wrapper">
+              <div class="card-restaurant-big swiper-slide">
+                <div>
+                  <img src="./img/img.png">
+                  <div class="maim-stock__slide-close card-restaurant-big-close text-14">
+                    Закрыто
+                    <br/>
+                    до завтра
+                  </div>
+                </div>
+                <div class="card-restaurant-big-name">
+                  Длинное название ресторана
+                </div>
+              </div>
+              <div class="card-restaurant-big swiper-slide">
+                <div>
+                </div>
+                <div class="card-restaurant-big-name">
+                  Название ресторана
+                </div>
+              </div>
+              <div class="card-restaurant-big swiper-slide">
+                <div>
+                </div>
+                <div class="card-restaurant-big-name">
+                  Длинное название ресторана
+                </div>
+              </div>
+              <div class="card-restaurant-big swiper-slide">
+                <div>
+                  <img src="./img/img.png">
+                </div>
+                <div class="card-restaurant-big-name">
+                  Длинное название ресторана
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="restaurants">
+  <div class="container-fluid custom-container">
+    <div class="restaurants__content d-flex flex-column">
+      <h2 class="restaurants__title text-16-bold">
+        <span class="text-orange">Все</span> рестораны
+      </h2>
+      <div class="restaurants__settings d-flex align-items-center justify-content-between">
+        <button class="restaurants__filter btn-reset">
+          <span class="restaurants__filter-svg">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 4.20001H17" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M1 13.8H17" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="6.79998" cy="4.2" r="3.2" fill="white" stroke="#333333" stroke-width="1.5"/>
+              <circle cx="11.2" cy="13.8" r="3.2" fill="white" stroke="#333333" stroke-width="1.5"/>
+            </svg>
+          </span>
+          <span class="restaurants__filter-text text-14-medium">
+            Отфильтровать
+          </span>
+        </button>
+        <button class="restaurants__sort btn-reset">
+          <span class="restaurants__filter-svg">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.2 17L4.2 1M4.2 1L1 4.2M4.2 1L7.4 4.2" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.8 17V1M13.8 17L10.6 13.8M13.8 17L17 13.8" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="restaurants__filter-text text-14-medium">
+            Отсортировать
+          </span>
+        </button>
+      </div>
+      <div class="restaurants__filters">
+        <h3 class="restaurants__title-second text-1">Блюда и кухни</h3>
+        <div class="restaurants__filters-list d-flex">
+          <button class="restaurants__filters-btn active btn-reset">Кухня</button>
+          <button class="restaurants__filters-btn btn-reset">Блюдооо</button>
+          <button class="restaurants__filters-btn btn-reset">Кухня</button>
+          <button class="restaurants__filters-btn btn-reset">Блюдооо</button>
+          <button class="restaurants__filters-btn btn-reset">Кухня</button>
+          <button class="restaurants__filters-btn btn-reset">Блюдооо</button>
+        </div>
+      </div>
+      <div class="restaurants__list d-flex flex-column">
+        <a class="restaurants__card">
+          <div class="restaurants__card-img">
+            <div class="restaurants__card-sale">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 15L15 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="3" cy="4" r="2.25" stroke="white" stroke-width="1.5"/>
+                <circle cx="13" cy="12" r="2.25" stroke="white" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="restaurants__card-like">
+              <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.49355 8.82282L8.01761 13.7654C8.40494 14.112 8.99318 14.104 9.37103 13.7472L14.5796 8.82801C15.4862 7.97174 16 6.77976 16 5.53269V4.8333C16 2.71622 14.2838 1 12.1667 1C11.0022 1 9.90085 1.52934 9.1734 2.43866L8.88931 2.79377C8.79364 2.91335 8.61176 2.91335 8.5161 2.79377L8.31421 2.54142C7.5348 1.56715 6.35478 1 5.1071 1C2.83881 1 1 2.83882 1 5.10711V5.48237C1 6.75762 1.54318 7.97249 2.49355 8.82282Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <img src="./img/img.png">
+            <div class="restaurants__card-close">
+              Закрыто до завтра
+            </div>
+          </div>
+          <div class="restaurants__card-info">
+            <div class="restaurants__card-info-top">
+              <h3 class="restaurants__card-info-title text-14-medium">
+                Длинное название ресторана
+              </h3>
+              <div class="restaurants__card-info-rate">
+                <div class="restaurants__card-info-rate-svg">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12V6.80554" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M5 12V1" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M9 12V4.36108" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M13 12V9.25" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="restaurants__card-info-rate-num text-gray-dark text-14">0,0</div>
+              </div>
+            </div>
+            <div class="restaurants__card-info-bottom">
+              <p class="restaurants__card-info-kitchen text-12 text-gray-dark">Вид кухни, категория блюд 1, категория блюд 2</p>
+              <span class="restaurants__card-info-time text-12 text-gray-dark">00 минут</span>
+            </div>
+          </div>
+        </a>
+        <a class="restaurants__card">
+          <div class="restaurants__card-img">
+            <div class="restaurants__card-sale">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 15L15 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="3" cy="4" r="2.25" stroke="white" stroke-width="1.5"/>
+                <circle cx="13" cy="12" r="2.25" stroke="white" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="restaurants__card-like">
+              <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.49355 8.82282L8.01761 13.7654C8.40494 14.112 8.99318 14.104 9.37103 13.7472L14.5796 8.82801C15.4862 7.97174 16 6.77976 16 5.53269V4.8333C16 2.71622 14.2838 1 12.1667 1C11.0022 1 9.90085 1.52934 9.1734 2.43866L8.88931 2.79377C8.79364 2.91335 8.61176 2.91335 8.5161 2.79377L8.31421 2.54142C7.5348 1.56715 6.35478 1 5.1071 1C2.83881 1 1 2.83882 1 5.10711V5.48237C1 6.75762 1.54318 7.97249 2.49355 8.82282Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="restaurants__card-info">
+            <div class="restaurants__card-info-top">
+              <h3 class="restaurants__card-info-title text-14-medium">
+                Длинное название ресторана
+              </h3>
+              <div class="restaurants__card-info-rate">
+                <div class="restaurants__card-info-rate-svg">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12V6.80554" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M5 12V1" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M9 12V4.36108" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M13 12V9.25" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="restaurants__card-info-rate-num text-gray-dark text-14">0,0</div>
+              </div>
+            </div>
+            <div class="restaurants__card-info-bottom">
+              <p class="restaurants__card-info-kitchen text-12 text-gray-dark">Вид кухни, категория блюд 1, категория блюд 2</p>
+              <span class="restaurants__card-info-time text-12 text-gray-dark">00 минут</span>
+            </div>
+          </div>
+        </a>
+        <a class="restaurants__card">
+          <div class="restaurants__card-img">
+            <div class="restaurants__card-sale">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 15L15 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="3" cy="4" r="2.25" stroke="white" stroke-width="1.5"/>
+                <circle cx="13" cy="12" r="2.25" stroke="white" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="restaurants__card-like">
+              <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.49355 8.82282L8.01761 13.7654C8.40494 14.112 8.99318 14.104 9.37103 13.7472L14.5796 8.82801C15.4862 7.97174 16 6.77976 16 5.53269V4.8333C16 2.71622 14.2838 1 12.1667 1C11.0022 1 9.90085 1.52934 9.1734 2.43866L8.88931 2.79377C8.79364 2.91335 8.61176 2.91335 8.5161 2.79377L8.31421 2.54142C7.5348 1.56715 6.35478 1 5.1071 1C2.83881 1 1 2.83882 1 5.10711V5.48237C1 6.75762 1.54318 7.97249 2.49355 8.82282Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <img src="./img/img.png">
+          </div>
+          <div class="restaurants__card-info">
+            <div class="restaurants__card-info-top">
+              <h3 class="restaurants__card-info-title text-14-medium">
+                Длинное название ресторана
+              </h3>
+              <div class="restaurants__card-info-rate">
+                <div class="restaurants__card-info-rate-svg">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12V6.80554" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M5 12V1" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M9 12V4.36108" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M13 12V9.25" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="restaurants__card-info-rate-num text-gray-dark text-14">0,0</div>
+              </div>
+            </div>
+            <div class="restaurants__card-info-bottom">
+              <p class="restaurants__card-info-kitchen text-12 text-gray-dark">Вид кухни, категория блюд 1, категория блюд 2</p>
+              <span class="restaurants__card-info-time text-12 text-gray-dark">00 минут</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+      <div class="sorting__wrap">
+  <div class="sorting">
+    <div class="custom-container container-fluid">
+      <div class="sorting__touch" data-swipe-threshold="20" data-swipe-timeout="500" data-swipe-ignore="false">
+        <div class="sorting__touch-strip"></div>
+      </div>
+      <div class="sorting__content">
+        <div class="sorting__box">
+          <div class="sorting__block">
+            <label class="sorting__label">
+              <input type="radio" name="По умолчанию" class="sorting__input">
+              <span class="sorting__radio"></span>
+              <span class="sorting__text text-16-bold">
+                По умолчанию
+              </span>
+            </label>
+            </div>
+          <div class="sorting__block">
+            <h3 class="sorting__block-title text-16-bold">По рейтингу</h3>
+            <div class="sorting__block-list d-flex flex-column">
+              <label class="sorting__label">
+                <input type="radio" name="rating" class="sorting__input">
+                <span class="sorting__radio"></span>
+                <span class="sorting__text text-16">
+                  Сначала с высоким рейтингом
+                </span>
+              </label>
+              <label class="sorting__label">
+                <input type="radio" name="rating" class="sorting__input">
+                <span class="sorting__radio"></span>
+                <span class="sorting__text text-16">
+                  Сначала с низким рейтингом
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="sorting__block">
+            <h3 class="sorting__block-title text-16-bold">По скорости доставки</h3>
+            <div class="sorting__block-list d-flex flex-column">
+              <label class="sorting__label">
+                <input type="radio" name="speed" class="sorting__input">
+                <span class="sorting__radio"></span>
+                <span class="sorting__text text-16">
+                  Сначала с быстрой доставкой
+                </span>
+              </label>
+              <label class="sorting__label">
+                <input type="radio" name="speed" class="sorting__input">
+                <span class="sorting__radio"></span>
+                <span class="sorting__text text-16">
+                  Сначала с медленной доставкой
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="sorting__block">
+            <h3 class="sorting__block-title text-16-bold">По минимальной сумме заказа</h3>
+            <div class="sorting__block-list d-flex flex-column">
+              <label class="sorting__label">
+                <input type="radio" name="sum" class="sorting__input">
+                <span class="sorting__radio"></span>
+                <span class="sorting__text text-16">
+                  Сначала с наименьшей минимальной суммой заказа
+                </span>
+              </label>
+              <label class="sorting__label">
+                <input type="radio" name="sum" class="sorting__input">
+                <span class="sorting__radio"></span>
+                <span class="sorting__text text-16">
+                  Сначала с наибольшей минимальной суммой заказа
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="sorting__block">
+            <h3 class="sorting__block-title text-16-bold">По дороговизне</h3>
+            <div class="sorting__block-list d-flex flex-column">
+              <label class="sorting__label">
+                <input type="radio" name="expensive" class="sorting__input">
+                <span class="sorting__radio"></span>
+                <span class="sorting__text text-16">
+                  Сначала дорогие
+                </span>
+              </label>
+              <label class="sorting__label">
+                <input type="radio" name="expensive" class="sorting__input">
+                <span class="sorting__radio"></span>
+                <span class="sorting__text text-16">
+                  Сначала недорогие
+                </span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="filter__wrap">
+  <div class="filter">
+    <div class="custom-container container-fluid">
+      <div class="filter__touch">
+        <div class="filter__touch-strip"></div>
+      </div>
+      <div class="filter__content">
+        <div class="filter__box d-flex flex-wrap">
+          <button class="filter__btn btn-reset active">Рекомендуем</button>
+          <button class="filter__btn btn-reset">Новые рестораны</button>
+          <button class="filter__btn btn-reset">Есть акции</button>
+          <button class="filter__btn btn-reset">Еще какой-нибудь фильтр</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+    <footer class="footer">
+      <div class="container-fluid custom-container">
+  <div class="footer__content">
+    <nav class="footer__nav">
+      <ul class="footer__list list-reset d-flex align-items-center justify-content-between">
+        <li class="footer__item">
+          <a href="account.html" class="footer__link d-flex align-items-center justify-content-center">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.3379 19H2.66207C2.0718 19 1.63868 18.4453 1.78184 17.8726L1.80225 17.791C2.80003 13.7999 6.38605 11 10.5 11C14.6139 11 18.2 13.7999 19.1977 17.791L19.2182 17.8726C19.3613 18.4453 18.9282 19 18.3379 19Z" stroke="#FF6B00" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="10.5" cy="6" r="5" stroke="#FF6B00" stroke-width="2"/>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="like.html" class="footer__link d-flex align-items-center justify-content-center">
+            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.75903 11.822L10.8201 18.3695C11.2036 18.7252 11.7964 18.7252 12.1799 18.3695L19.241 11.822C20.6814 10.4864 21.5 8.61087 21.5 6.64651V6.15438C21.5 3.30769 19.1923 1 16.3456 1C14.5745 1 12.9275 1.9093 11.9838 3.40806L11.7515 3.77702C11.6349 3.96215 11.3651 3.96215 11.2485 3.77702L11.0162 3.40806C10.0725 1.9093 8.42547 1 6.65438 1C3.80769 1 1.5 3.30769 1.5 6.15438V6.6465C1.5 8.61086 2.31863 10.4864 3.75903 11.822Z" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="footer__link-count">10</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="/" class="footer__link d-flex align-items-center justify-content-center">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.5 8.48908V18C19.5 18.5523 19.0523 19 18.5 19H15H14.5C13.9477 19 13.5 18.5523 13.5 18V13C13.5 12.4477 13.0523 12 12.5 12H8.5C7.94772 12 7.5 12.4477 7.5 13V18C7.5 18.5523 7.05228 19 6.5 19H6H2.5C1.94772 19 1.5 18.5523 1.5 18V8.48908C1.5 8.18049 1.64247 7.88919 1.88606 7.69973L9.88606 1.47751C10.2472 1.19665 10.7528 1.19665 11.1139 1.47751L19.1139 7.69973C19.3575 7.88919 19.5 8.18049 19.5 8.48908Z" stroke="#FF6B00" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="basket.html" class="footer__link d-flex align-items-center justify-content-center">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.02082 0.184993C9.48035 0.491346 9.60452 1.11222 9.29817 1.57174L7.86007 3.72889H13.1399L11.7018 1.57174C11.3955 1.11222 11.5197 0.491346 11.9792 0.184993C12.4387 -0.121359 13.0596 0.00281458 13.3659 0.462343L15.5436 3.72889H18.6694C19.774 3.72889 20.6694 4.62432 20.6694 5.72889V8.50852C20.6694 9.61308 19.774 10.5085 18.6694 10.5085H18.6345L18.5694 10.8663L17.3628 17.5028C17.1034 18.9292 15.861 19.9661 14.4112 19.9661H6.58884C5.13898 19.9661 3.89659 18.9292 3.63723 17.5028L2.4306 10.8663L2.36555 10.5085H2.33057C1.226 10.5085 0.330566 9.61309 0.330566 8.50852V5.7289C0.330566 4.62433 1.226 3.72889 2.33057 3.72889H5.45637L7.63407 0.462343C7.94042 0.00281458 8.56129 -0.121359 9.02082 0.184993ZM2.33057 5.72889H18.6694V8.50852L16.6017 8.50852H4.39834L2.33057 8.50852V5.72889ZM4.39834 10.5085L4.76198 12.5085L5.60497 17.145C5.69143 17.6205 6.10556 17.9661 6.58884 17.9661H14.4112C14.8945 17.9661 15.3086 17.6205 15.395 17.145L16.238 12.5085L16.6017 10.5085H14.5689H6.43113H4.39834ZM8.46612 12.2204C9.0184 12.2204 9.46612 12.6681 9.46612 13.2204V15.2543C9.46612 15.8065 9.0184 16.2543 8.46612 16.2543C7.91383 16.2543 7.46612 15.8065 7.46612 15.2543V13.2204C7.46612 12.6681 7.91383 12.2204 8.46612 12.2204ZM13.5339 13.2204C13.5339 12.6681 13.0862 12.2204 12.5339 12.2204C11.9816 12.2204 11.5339 12.6681 11.5339 13.2204V15.2543C11.5339 15.8065 11.9816 16.2543 12.5339 16.2543C13.0862 16.2543 13.5339 15.8065 13.5339 15.2543V13.2204Z" fill="#FF6B00"/>
+            </svg>
+            <span class="footer__link-count">10</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link d-flex align-items-center justify-content-center">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 19H16.5C18.1569 19 19.5 17.6569 19.5 16V2C19.5 1.44772 19.0523 1 18.5 1H6.5C5.94772 1 5.5 1.44772 5.5 2V6.29412M5.5 19V6.29412M5.5 19H3.5M5.5 6.29412H2.5C1.94772 6.29412 1.5 6.74183 1.5 7.29412V16.8824C1.5 18.0519 2.39543 19 3.5 19M5.5 6.29412V16.8824C5.5 18.0519 4.60457 19 3.5 19M9.5 6.29412H15.5M9.5 10.5294H12.5" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+    </footer>
+  </div>
+</body>
+<script>
+</script>
+</html>
