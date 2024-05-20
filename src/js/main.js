@@ -34,8 +34,7 @@ if (document.getElementById("index")) {
 
   filterBtn.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtn.forEach(elem => elem.classList.remove("active"))
-      btn.classList.add("active")
+      btn.classList.toggle("active")
     })
   })
 
@@ -343,8 +342,7 @@ if (document.getElementById("restaurant")) {
 
   filterBtn.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtn.forEach(elem => elem.classList.remove("active"))
-      btn.classList.add("active")
+      btn.classList.toggle("active")
     })
   })
 
@@ -428,67 +426,69 @@ function stopPropagation(event) {
   event.stopPropagation();
 }
 
-function handleTouchStart(event) {
-  this.startY = event.touches[0].clientY;
-
-}
-
-function handleTouchMove(event, scroll) {
-  let endY = event.touches[0].clientY;
-  if (endY > this.startY && scroll.scrollTop === 0) {
-    this.classList.remove("active");
-    setTimeout(() => {
-      document.body.classList.remove("lock")
-    }, 300)
+function handleStart(event) {
+  if (event.type === "touchstart") {
+    this.startY = event.touches[0].clientY;
+  } else if (event.type === "mousedown") {
+    this.startY = event.clientY;
+    this.isDragging = true;
   }
 }
 
+function handleMove(event, scroll) {
+  let endY;
+  if (event.type === "touchmove") {
+    endY = event.touches[0].clientY;
+  } else if (event.type === "mousemove" && this.isDragging) {
+    endY = event.clientY;
+  } else {
+    return;
+  }
 
-function handleMouseDown(event) {
-  this.startY = event.clientY;
-  this.isDragging = true;
+  let deltaY = endY - this.startY;
+  if (deltaY > 0 && scroll.scrollTop === 0) {
+    this.style.bottom = -deltaY + "px";
+  }
 }
 
-function handleMouseMove(event, scroll) {
-  if (this.isDragging) {
-    let endY = event.clientY;
-    let deltaY = endY - this.startY;
-    if (deltaY > 0 && scroll.scrollTop === 0) {
-      this.style.bottom = -deltaY + "px";
+function handleEnd(event, scroll) {
+  if (this.isDragging || event.type === "touchend") {
+    let endY;
+    if (event.type === "touchend") {
+      endY = event.changedTouches[0].clientY;
+    } else if (event.type === "mouseup") {
+      endY = event.clientY;
+      this.isDragging = false;
     }
-  }
-}
 
-function handleMouseUp(event, scroll) {
-  if (this.isDragging) {
-    let endY = event.clientY;
     let deltaY = endY - this.startY;
-    console.log(scroll.scrollTop)
     if (deltaY > 50 && scroll.scrollTop === 0) {
       this.classList.remove("active");
-      document.body.classList.remove("lock")
+      document.body.classList.remove("lock");
     } else {
       this.style.bottom = "0";
     }
-    this.isDragging = false;
   }
 }
 
 function setupModalEvents(modal, scroll) {
-
   modal.addEventListener("click", stopPropagation);
-  scroll.addEventListener("touchstart", stopPropagation)
+  scroll.addEventListener("touchstart", stopPropagation);
 
-  modal.addEventListener("touchstart", handleTouchStart);
+  modal.addEventListener("touchstart", handleStart);
   modal.addEventListener("touchmove", function (event) {
-    handleTouchMove.call(modal, event, scroll);
+    handleMove.call(modal, event, scroll);
   });
-  modal.addEventListener("mousedown", handleMouseDown);
+  modal.addEventListener("touchend", function (event) {
+    handleEnd.call(modal, event, scroll);
+  });
+
+  modal.addEventListener("mousedown", handleStart);
   modal.addEventListener("mousemove", function (event) {
-    handleMouseMove.call(modal, event, scroll);
+    handleMove.call(modal, event, scroll);
   });
   modal.addEventListener("mouseup", function (event) {
-    handleMouseUp.call(modal, event, scroll);
+    handleEnd.call(modal, event, scroll);
   });
 }
 

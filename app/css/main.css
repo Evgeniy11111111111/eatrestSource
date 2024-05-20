@@ -2211,8 +2211,10 @@ main {
 }
 .sorting__box {
   overflow: auto;
-  max-height: 500px;
-  scrollbar-width: none; /* Firefox */
+  height: calc(80vh - 70px);
+  scrollbar-width: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   -ms-overflow-style: none;
   padding-right: 20px;
   margin-right: -20px;
