@@ -159,3 +159,37 @@ main {
 .main-btn {
   @include btnMain(var(--orange), var(--white), var(--text-semibold))
 }
+
+
+.checkbox-btn {
+  display: flex;
+  user-select: none;
+  position: relative;
+}
+.checkbox-btn input[type=checkbox] {
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+.checkbox-btn span {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-size-14);
+  cursor: pointer;
+  padding: var(--gap-10);
+  line-height: var(--text-height-121);
+  border-radius: var(--radius-5);
+  color: var(--black);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--gray-light);
+}
+
+/* Checked */
+.checkbox-btn input[type=checkbox]:checked + span {
+  background: var(--orange);
+  color: var(--white);
+}

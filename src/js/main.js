@@ -28,24 +28,6 @@ if (document.getElementById("index")) {
 
   setupModalEvents(sortModal, scrollSort)
   setupModalEvents(filterModal, scrollFilter)
-  console.log(scrollSort)
-
-  const filterBtn = document.querySelectorAll('.filter__btn');
-
-  filterBtn.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle("active")
-    })
-  })
-
-  const restaurantsFilterBtn = document.querySelectorAll('.restaurants__filters-btn')
-
-  restaurantsFilterBtn.forEach(btn => {
-    btn.addEventListener('click', () => {
-      restaurantsFilterBtn.forEach(elem => elem.classList.remove("active"))
-      btn.classList.add("active")
-    })
-  })
 
   const inputSearch = document.querySelector('.search-input');
   const btnClearSearch = document.querySelector('.search-input-clear')
@@ -77,16 +59,6 @@ if (document.getElementById("index")) {
   const formAddressSearch = document.querySelector(".js-search-form")
   const addressList = document.querySelector(".address-block-list")
 
-  const deliveryBtn = document.querySelectorAll(".header__delivery-btn")
-  deliveryBtn[0].classList.add("active")
-
-  deliveryBtn.forEach(btn => {
-    btn.addEventListener("click", () => {
-      deliveryBtn.forEach(elem => elem.classList.remove("active"))
-      btn.classList.add("active");
-    })
-  })
-
   addressBtn.addEventListener('click', () => {
     addressBtn.parentElement.classList.contains("is-show") ? accordionNotActive(addressBtn) : accordionActive(addressBtn)
   })
@@ -102,9 +74,6 @@ if (document.getElementById("index")) {
     e.preventDefault();
     const input = formAddressSearch.querySelector("input")
     const label = createLabel(input.value);
-    addressList.insertAdjacentHTML('beforeend', label);
-    input.value = "";
-    addressSearch.classList.remove("active");
   })
 
   document.addEventListener('click', (e) => {
@@ -338,14 +307,6 @@ if (document.getElementById("restaurant")) {
   setupModalEvents(sortModal, scrollSort)
   setupModalEvents(filterModal, scrollFilter)
 
-  const filterBtn = document.querySelectorAll('.filter__btn');
-
-  filterBtn.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle("active")
-    })
-  })
-
   document.addEventListener('click', (e) => {
     if (!sortModal.contains(e.target) && !btnSort.contains(e.target)) {
       sortModal.classList.remove("active")
@@ -359,15 +320,6 @@ if (document.getElementById("restaurant")) {
       document.body.classList.remove("lock")
 
     }
-  })
-
-  const restaurantsFilterBtn = document.querySelectorAll('.restaurant__settings-filters-btn')
-
-  restaurantsFilterBtn.forEach(btn => {
-    btn.addEventListener('click', () => {
-      restaurantsFilterBtn.forEach(elem => elem.classList.remove("active"))
-      btn.classList.add("active")
-    })
   })
 
   initArraySwiper();
