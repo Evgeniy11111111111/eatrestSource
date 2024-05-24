@@ -193,3 +193,29 @@ main {
   background: var(--orange);
   color: var(--white);
 }
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(.8);
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+  &-spinner {
+    background-color: var(--orange);
+  }
+}
+
+.preloader.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
